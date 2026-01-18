@@ -1,5 +1,10 @@
 package Characters.NPC;
 
 public class NPC {
-    //TODO pridat jmeno a dialog s danym NPCkem
+    private String name;
+    private String info;
+
+    public void mluv(){
+        //TODO pridat metodu pro dialog s danym NPC
+    }
 }
