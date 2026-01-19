@@ -20,7 +20,15 @@
     },
     {
       "name" : "Mechaon",
-      "info" :
+      "info" : "Planeta plná továren a robotů",
+      "conquered" : false,
+      "enemy": "Lord Mechano",
+      "items": ["Energetický krystal"],
+      "npcs": [],
+      "puzzles": ["SystemBoot", ""]
+    },
+    {
+      "name" :
     }
   ]
 }
