@@ -1,4 +1,4 @@
-package Hadanky;
+package Puzzles;
 
 public class Puzzle {
     private String name;

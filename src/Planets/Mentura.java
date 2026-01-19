@@ -1,4 +1,4 @@
-package Planety;
+package Planets;
 
 public class Mentura extends Planet{
 }

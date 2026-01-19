@@ -1,0 +1,26 @@
+{
+  "spongebob": {
+    "name": "Spongebob",
+    "hp": 100,
+    "startPLanet": "Terra Prime",
+    "inventoryCapacity": 5
+  },
+  "planets": [
+    {
+      "name": "Terra Prime",
+      "info": "Vychozí planeta a bezpečné místo.",
+      "conquered": true,
+      "enemy": null,
+      "items": [
+        "Královský odznak"
+      ],
+      "npcs": [
+        "Královský rádce"
+      ]
+    },
+    {
+      "name" : "Mechaon",
+      "info" :
+    }
+  ]
+}

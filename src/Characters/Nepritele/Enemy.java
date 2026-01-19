@@ -1,6 +1,6 @@
 package Characters.Nepritele;
 
-public class Nepritel {
+public class Enemy {
     private String name;
     private int hp;
     private String dialogue;
