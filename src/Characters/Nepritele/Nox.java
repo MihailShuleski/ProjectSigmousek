@@ -1,4 +1,4 @@
 package Characters.Nepritele;
 
-public class Nox extends Nepritel{
+public class Nox extends Enemy {
 }

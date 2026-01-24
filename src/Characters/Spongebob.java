@@ -1,7 +1,7 @@
 package Characters;
 
 public class Spongebob {
-    private String name = "Spongebob";
+    private String name ;
     private int health;
     //TODO pridat inventar
     private String currentPlanet;
