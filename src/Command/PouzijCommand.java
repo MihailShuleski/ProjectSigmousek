@@ -8,4 +8,9 @@ public class PouzijCommand implements Command{
     public void execute() {
         Command.super.execute();
     }
+
+    @Override
+    public boolean exit() {
+        return false;
+    }
 }

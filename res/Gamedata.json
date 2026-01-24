@@ -7,28 +7,153 @@
   },
   "planets": [
     {
+      "id": "terra_prime",
       "name": "Terra Prime",
-      "info": "Vychozí planeta a bezpečné místo.",
+      "description": "Výchozí planeta a bezpečné místo.",
       "conquered": true,
       "enemy": null,
-      "items": [
-        "Královský odznak"
-      ],
-      "npcs": [
-        "Královský rádce"
-      ]
+      "items": ["královský_odznak"],
+      "npcs": ["královský_rádce"],
+      "neighbours": ["mechaon"]
     },
     {
-      "name" : "Mechaon",
-      "info" : "Planeta plná továren a robotů",
-      "conquered" : false,
-      "enemy": "Lord Mechano",
-      "items": ["Energetický krystal"],
-      "npcs": [],
-      "puzzles": ["SystemBoot", ""]
+      "id": "mechaon",
+      "name": "Mechaon",
+      "description": "Planeta plná továren, robotů a obrazovek.",
+      "conquered": false,
+      "enemy": "lord_mechano",
+      "items": ["energetický_krystal"],
+      "npcs": ["servisní_robot", "datový_technik"],
+      "neighbours": ["terra_prime", "brutalis"]
     },
     {
-      "name" :
+      "id": "brutalis",
+      "name": "Brutalis",
+      "description": "Planeta arén a pevností.",
+      "conquered": false,
+      "enemy": "generál_kragg",
+      "items": ["lékárnička"],
+      "npcs": ["zraněný_bojovník", "arénový_mistr"],
+      "neighbours": ["mechaon", "mentara"]
+    },
+    {
+      "id": "mentara",
+      "name": "Mentara",
+      "description": "Planeta chrámů a knihoven.",
+      "conquered": false,
+      "enemy": "mistr_myron",
+      "items": ["holografický_skener"],
+      "npcs": ["strážce_chrámu", "knihovník_moudrosti"],
+      "neighbours": ["brutalis", "galactic_core"]
+    },
+    {
+      "id": "galactic_core",
+      "name": "Galactic Core",
+      "description": "Centrum galaxie. Temná a nebezpečná planeta.",
+      "conquered": false,
+      "enemy": "vládce_nox",
+      "items": ["datový_klíč_galaxie"],
+      "npcs": ["ztracený_poutník", "starý_kronikář"],
+      "neighbours": ["mentara"]
+    }
+  ],
+  "enemies": [
+    {
+      "id": "lord_mechano",
+      "name": "Lord Mechano",
+      "health": 80,
+      "dialogue": "Stroje jsou dokonalé. Ty nemáš šanci."
+    },
+    {
+      "id": "generál_kragg",
+      "name": "Generál Kragg",
+      "health": 120,
+      "dialogue": "Jen síla rozhoduje!"
+    },
+    {
+      "id": "mistr_myron",
+      "name": "Mistr Myron",
+      "health": 90,
+      "dialogue": "Mysl je nejsilnější zbraň."
+    },
+    {
+      "id": "vládce_nox",
+      "name": "Vládce Nox",
+      "health": 150,
+      "dialogue": "Spojuji vše. Sílu, techniku i mysl."
+    }
+  ],
+  "items": [
+    {
+      "id": "energetický_krystal",
+      "name": "Energetický krystal",
+      "type": "boost",
+      "description": "Zvyšuje poškození hádanek."
+    },
+    {
+      "id": "lékárnička",
+      "name": "Lékárnička",
+      "type": "heal",
+      "description": "Obnoví 30 HP."
+    },
+    {
+      "id": "holografický_skener",
+      "name": "Holografický skener",
+      "type": "hint",
+      "description": "Zobrazí nápovědu."
+    },
+    {
+      "id": "datový_klíč_galaxie",
+      "name": "Datový klíč galaxie",
+      "type": "key",
+      "description": "Důkaz ovládnutí planety."
+    }
+  ],
+  "npcs": [
+    {
+      "id": "královský_rádce",
+      "name": "Královský rádce",
+      "dialogue": "Pamatuj, ne každá bitva se vyhrává silou."
+    },
+    {
+      "id": "servisní_robot",
+      "name": "Servisní robot",
+      "dialogue": "Systémy planety Mechaon jsou nestabilní."
+    },
+    {
+      "id": "datový_technik",
+      "name": "Datový technik",
+      "dialogue": "Správná kombinace může vypnout obranu."
+    },
+    {
+      "id": "zraněný_bojovník",
+      "name": "Zraněný bojovník",
+      "dialogue": "Kragg je silný, ale pomalý."
+    },
+    {
+      "id": "arénový_mistr",
+      "name": "Arénový mistr",
+      "dialogue": "V aréně přežijí jen chytří bojovníci."
+    },
+    {
+      "id": "strážce_chrámu",
+      "name": "Strážce chrámu",
+      "dialogue": "Trpělivost je klíčem k poznání."
+    },
+    {
+      "id": "knihovník_moudrosti",
+      "name": "Knihovník moudrosti",
+      "dialogue": "Odpovědi jsou skryté v symbolech."
+    },
+    {
+      "id": "ztracený_poutník",
+      "name": "Ztracený poutník",
+      "dialogue": "V jádru galaxie se ztrácí čas."
+    },
+    {
+      "id": "starý_kronikář",
+      "name": "Starý kronikář",
+      "dialogue": "Nox kdysi býval ochráncem světů."
     }
   ]
 }
