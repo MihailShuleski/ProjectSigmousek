@@ -2,7 +2,7 @@ package Characters;
 
 public class Spongebob {
     private String name ;
-    private int health;
+    private int hp = 100;
     //TODO pridat inventar
     private String currentPlanet;
 
