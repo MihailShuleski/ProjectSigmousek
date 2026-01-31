@@ -4,7 +4,10 @@ import Characters.Spongebob;
 import Items.Item;
 
 public class VezmiCommand implements Command{
-    Spongebob spongebob=new Spongebob();
+    Spongebob spongebob;
+    public VezmiCommand(Spongebob spongebob){
+        this.spongebob=spongebob;
+    }
     @Override
     public void execute(String[] parts) {
         if (parts.length < 2) {

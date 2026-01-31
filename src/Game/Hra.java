@@ -18,6 +18,11 @@ public class Hra {
         world = GameData.loadGameDataFromResources("/gamedata.json");
         commandManager.addCommand("jdi",new JdiCommand(spongebob));
         commandManager.addCommand("mluv",new MluvCommand(spongebob));
+        commandManager.addCommand("prozkoumej",new ProzkoumejCommand(spongebob));
+        commandManager.addCommand("vezmi",new VezmiCommand(spongebob));
+        commandManager.addCommand("pouzij",new PouzijCommand(spongebob));
+        commandManager.addCommand("hadanka",new HadankaCommand(spongebob));
+
     }
     public void start(){
         inicialization();

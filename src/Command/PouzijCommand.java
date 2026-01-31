@@ -3,7 +3,10 @@ package Command;
 import Characters.Spongebob;
 
 public class PouzijCommand implements Command{
-    Spongebob spongebob=new Spongebob();
+    Spongebob spongebob;
+    public PouzijCommand(Spongebob spongebob){
+        this.spongebob=spongebob;
+    }
     @Override
     public void execute(String[] parts) {
         if (parts.length<2){
