@@ -8,11 +8,8 @@ public abstract class Item {
     private String type;
     private String info;
 
-    public Item(String id, String name, String type, String info) {
+    public Item(String id) {
         this.id = id;
-        this.name = name;
-        this.type = type;
-        this.info = info;
     }
 
     public String getId() {
