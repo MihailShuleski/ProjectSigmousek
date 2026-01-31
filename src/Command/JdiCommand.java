@@ -8,6 +8,10 @@ public class JdiCommand implements Command{
     public JdiCommand(Spongebob spongebob){
         this.spongebob = spongebob;
     }
+    CommandManager commandManager=new CommandManager();
+    private String normalizeInput(String input){
+        return input.trim().toLowerCase().replace(" ","_");
+    }
 
     @Override
     public void execute(String[] parts) {
@@ -16,13 +20,21 @@ public class JdiCommand implements Command{
           return;
       }
       String planet=parts[1];
-      if (spongebob.getData().findPlanet(spongebob.getCurrentPlanet()).getNeighbours().contains(planet)){
-          spongebob.setCurrentPlanet(planet);
-          System.out.println("Úspěšně jste cestovali na planetu: " + planet);
-      }else {
-          System.out.println("Na tuto planetu nelze cestovat z aktualni planety: "+spongebob.getData().findPlanet(spongebob.getCurrentPlanet()).getName());
-      }
+      for (int i= 2;i<parts.length;i++){ //pokud ma planeta vice jak 1 slovo treba Terra Prime tak se z toho udela string z tech dvou slov
+          planet += " "+ parts[i];
+        }
+      String planet1=normalizeInput(planet);
+      String current=spongebob.getData().findPlanet(spongebob.getCurrentPlanet()).getName();//String aby se napsala nazev current planety a ne id
 
+      if (spongebob.getData().findPlanet(spongebob.getCurrentPlanet()).getNeighbours().contains(planet1)){
+          spongebob.setCurrentPlanet(planet1);
+          current=spongebob.getData().findPlanet(spongebob.getCurrentPlanet()).getName();
+          System.out.println("Úspěšně jste cestovali na planetu: " + current);
+      } else if (spongebob.getData().findPlanet(spongebob.getCurrentPlanet()).getId().equals(planet1)) {
+          System.out.println("Nemužete cestovat na danou planetu,jelikož už tam jste :)");
+      } else {
+          System.out.println("Na tuto planetu nelze cestovat z aktualni planety: "+current);
+      }
     }
 
     @Override
