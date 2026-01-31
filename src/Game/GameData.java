@@ -40,4 +40,10 @@ public class GameData {
         }
         throw new IllegalArgumentException("Neexistuje planeta s id: "+id);
     }
+    public NPC findNpc(String id){
+        for (NPC npc : npcs) {
+            if(npc.getId().equals(id)) return npc;
+        }
+        throw new IllegalArgumentException("Neexistuje npc s id: "+id);
+    }
 }

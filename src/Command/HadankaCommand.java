@@ -6,7 +6,6 @@ public class HadankaCommand implements Command{
     Hra hra =new Hra();
     @Override
     public void execute(String[] parts) {
-        return;
     }
 
     @Override
