@@ -3,8 +3,6 @@ package Game;
 import Characters.Spongebob;
 import Command.*;
 import Command.CommandManager;
-
-import java.util.HashMap;
 import java.util.Scanner;
 
 public class Hra {

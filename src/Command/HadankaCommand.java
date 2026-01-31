@@ -1,11 +1,16 @@
 package Command;
 
+import Characters.Spongebob;
 import Game.Hra;
 
 public class HadankaCommand implements Command{
-    Hra hra =new Hra();
+    Spongebob spongebob =new Spongebob();
+    public HadankaCommand(Spongebob spongebob){
+        this.spongebob=spongebob;
+    }
     @Override
     public void execute(String[] parts) {
+        System.out.println("Zacala se boj na planetě: "+spongebob.getCurrentPlanet());
     }
 
     @Override
