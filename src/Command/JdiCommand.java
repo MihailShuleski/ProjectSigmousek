@@ -1,12 +1,10 @@
 package Command;
 
 import Characters.Spongebob;
-import Game.Hra;
 
-import java.util.Scanner;
 
 public class JdiCommand implements Command{
-    private Spongebob spongebob;
+    private final Spongebob spongebob;
     public JdiCommand(Spongebob spongebob){
         this.spongebob = spongebob;
     }
@@ -22,7 +20,7 @@ public class JdiCommand implements Command{
           spongebob.setCurrentPlanet(planet);
           System.out.println("Úspěšně jste cestovali na planetu: " + planet);
       }else {
-          System.out.println("Na tuto planetu nelze cestovat z aktualni planety: "+spongebob.getCurrentPlanet());
+          System.out.println("Na tuto planetu nelze cestovat z aktualni planety: "+spongebob.getData().findPlanet(spongebob.getCurrentPlanet()).getName());
       }
 
     }

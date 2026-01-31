@@ -4,11 +4,17 @@ import Game.GameData;
 import Inventory.Inventory;
 
 public class Spongebob {
-    private String name="Spongebob" ;
-    private int health=100;
+    private String name ;
+    private int health;
     Inventory inventory=new Inventory();
-    private String currentPlanet="terra_prime";
+    private String currentPlanet;
     GameData data = GameData.loadGameDataFromResources("/gamedata.json");
+
+    public Spongebob() {
+        this.name = "Spongebob";
+        this.health = 100;
+        this.currentPlanet = "terra_prime";
+    }
 
     public void setCurrentPlanet(String currentPlanet) {
         this.currentPlanet = currentPlanet;

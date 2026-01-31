@@ -1,9 +1,9 @@
 package Command;
 
 public interface Command {
-    default void execute(String[] parts){}
 
-    void execute();
+
+    void execute(String[] parts);
 
     boolean exit();
 
