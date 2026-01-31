@@ -5,17 +5,19 @@ import Command.*;
 import Command.CommandManager;
 
 import java.util.HashMap;
+import java.util.Scanner;
 
 public class Hra {
     private Spongebob spongebob;
     private GameData world;
     private HashMap<String, Command> commands;
+    Scanner scanner=new Scanner(System.in);
 
 
     public void inicialization(){
         commands=new HashMap<>();
         world = GameData.loadGameDataFromResources("/gamedata.json");
-        commands.put("pohyb", new JdiCommand(spongebob));
+        commands.put("jdi", new JdiCommand(spongebob));
         //TODO pridat metodu aby se hra zacala a nacetla commands do mapy
     }
     public void start(){

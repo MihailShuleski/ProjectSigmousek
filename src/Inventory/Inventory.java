@@ -1,8 +1,12 @@
 package Inventory;
 
+import Items.Item;
+
+import java.util.ArrayList;
+
 public class Inventory {
-    private int capacity;
-    //TODO pridat List pro itemy
+    private int capacity=5;
+    public ArrayList<Item> Inventory=new ArrayList<>(capacity);
 
     public void pridatItem(){
         //TODO pridat metodu pro pridani prvku do inventare

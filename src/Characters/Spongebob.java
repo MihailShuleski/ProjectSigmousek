@@ -1,24 +1,36 @@
 package Characters;
 
-public class Spongebob {
-    private String name ;
-    private int health;
-    //TODO pridat inventar
-    private String currentPlanet;
+import Game.GameData;
+import Inventory.Inventory;
 
-    public void jdi() {
-        //TODO pridat  metodu na cestovani mezi planetami
+public class Spongebob {
+    private String name="Spongebob" ;
+    private int health=100;
+    Inventory inventory=new Inventory();
+    private String currentPlanet="terra_prime";
+    GameData data = GameData.loadGameDataFromResources("/gamedata.json");
+
+    public void setCurrentPlanet(String currentPlanet) {
+        this.currentPlanet = currentPlanet;
     }
-    public void vezmi(){
-        //TODO pridat metodu na brani itemu
+
+    public String getName() {
+        return name;
     }
-    public void pouzij(){
-        //TODO pridat metodu na pouzivani itemu
+
+    public int getHealth() {
+        return health;
     }
-    public void mluv(){
-        //TODO pridat metodu na pousteni dialogu s NPC
+
+    public Inventory getInventory() {
+        return inventory;
     }
-    public void hadanka(){
-        //TODO pridat metodu na odpovedeni hadanky
+
+    public String getCurrentPlanet() {
+        return currentPlanet;
+    }
+
+    public GameData getData() {
+        return data;
     }
 }
