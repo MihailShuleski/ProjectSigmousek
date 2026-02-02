@@ -1,10 +1,17 @@
 package Characters.Nepritele;
 
-public class Enemy {
+public abstract class Enemy {
     private String id;
     private String name;
     private int hp;
     private String dialogue;
+
+    public Enemy(String id, String name, int hp, String dialogue) {
+        this.id = id;
+        this.name = name;
+        this.hp = hp;
+        this.dialogue = dialogue;
+    }
 
     public void setId(String id) {
         this.id = id;
@@ -12,14 +19,6 @@ public class Enemy {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public void setHp(int hp) {
-        this.hp = hp;
-    }
-
-    public void setDialogue(String dialogue) {
-        this.dialogue = dialogue;
     }
 
     public String getId() {
@@ -38,10 +37,7 @@ public class Enemy {
         return dialogue;
     }
 
-    public void udelatDamage(){
-        //TODO pridat metodu pro delani Damage
-    }
-    public void utocit(){
-        //TODO pridat metodu pro delani Damage Spongebobovi jestli Spongebob hadanku neda
-    }
+    public abstract void udelatDamage();
+    public abstract void utocit();
+
 }
