@@ -1,6 +1,6 @@
 package Characters.Nepritele;
 
-public abstract class Enemy {
+public class Enemy {
     private String id;
     private String name;
     private int hp;
@@ -38,6 +38,6 @@ public abstract class Enemy {
     }
 
     public abstract void udelatDamage();
-    public abstract void utocit();
+
 
 }
