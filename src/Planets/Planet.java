@@ -4,7 +4,7 @@ import Characters.Nepritele.Enemy;
 
 import java.util.ArrayList;
 
-public abstract class Planet {
+public class Planet {
     private String id;
     private String name;
     private String info;

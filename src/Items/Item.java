@@ -2,7 +2,7 @@ package Items;
 
 import Characters.Spongebob;
 
-public abstract class Item {
+public class Item {
     private String id;
     private String name;
     private String type;
@@ -28,6 +28,6 @@ public abstract class Item {
         return info;
     }
 
-    public abstract void pouzij(Spongebob spongebob);
+    public void pouzij(Spongebob spongebob){};
 
 }

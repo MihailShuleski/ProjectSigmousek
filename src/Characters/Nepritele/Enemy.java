@@ -37,7 +37,7 @@ public class Enemy {
         return dialogue;
     }
 
-    public abstract void udelatDamage();
+    public void udelatDamage(){};
 
 
 }
