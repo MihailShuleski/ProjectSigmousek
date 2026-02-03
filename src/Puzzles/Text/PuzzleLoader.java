@@ -1,18 +1,20 @@
 package Puzzles.Text;
+import Puzzles.CombatPuzzle;
 import Puzzles.Puzzle;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
 public class PuzzleLoader {
-    ArrayList<Puzzle> puzzles=new ArrayList<>();
 
-    public void loadPuzzle(String resourcePath) {
+    public void loadPuzzle(String resourcePath,List<Puzzle> puzzles) {
         String question;
         String correctAnswer;
         int damage;
+        puzzles=new ArrayList<>();
         try (BufferedReader br=new BufferedReader(new FileReader(resourcePath))) {
             do {
                 question = br.readLine();
@@ -26,6 +28,7 @@ public class PuzzleLoader {
                 System.out.println("Problem se souborem: " + resourcePath);
             }
         }
+
     };
 
 

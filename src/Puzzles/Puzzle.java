@@ -5,10 +5,9 @@ import Puzzles.Text.PuzzleLoader;
 import java.util.ArrayList;
 
 public class Puzzle {
-    PuzzleLoader puzzleLoader=new PuzzleLoader();
-    private final String question;
-    private final String correctAnswer;
-    private final int damage; //kazda hadanka bude delat jiny pocet damage ig
+    private String question;
+    private String correctAnswer;
+    private int damage; //kazda hadanka bude delat jiny pocet damage ig
 
 
     public String getQuestion() {
@@ -29,8 +28,5 @@ public class Puzzle {
         this.damage = damage;
     }
 
-    public void loadPuzzle(String res) {
-
-    }
 
 }
