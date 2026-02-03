@@ -3,6 +3,8 @@ package Game;
 import Characters.Spongebob;
 import Command.*;
 import Command.CommandManager;
+import Puzzles.CombatPuzzle;
+
 import java.util.Scanner;
 
 public class Hra {
@@ -11,6 +13,7 @@ public class Hra {
     Scanner scanner=new Scanner(System.in);
     CommandManager commandManager = new CommandManager();
     boolean checkWin=false;
+    CombatPuzzle combatPuzzle=new CombatPuzzle();
 
 
     public void inicialization(){
@@ -26,11 +29,14 @@ public class Hra {
     }
     public void start(){
         inicialization();
+        combatPuzzle.loadPuzzles();
+        System.out.println(combatPuzzle.getCombatPuzzles());
         while (checkWin == false){
             System.out.print("Zadejte příkaz: ");
             String input= scanner.nextLine();
             commandManager.processCommand(input);
         }
+
 
 
 
