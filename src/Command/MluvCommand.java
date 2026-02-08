@@ -3,7 +3,7 @@ package Command;
 import Characters.Spongebob;
 
 public class MluvCommand implements Command{
-    Spongebob spongebob=new Spongebob();
+    Spongebob spongebob;
     public MluvCommand(Spongebob spongebob){
         this.spongebob=spongebob;
     }

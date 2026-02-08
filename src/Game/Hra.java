@@ -17,7 +17,7 @@ public class Hra {
 
 
     public void inicialization(){
-        spongebob=new Spongebob();
+        spongebob =new Spongebob();
         world = GameData.loadGameDataFromResources("/gamedata.json");
         commandManager.addCommand("jdi",new JdiCommand(spongebob));
         commandManager.addCommand("mluv",new MluvCommand(spongebob));
@@ -36,12 +36,6 @@ public class Hra {
             String input= scanner.nextLine();
             commandManager.processCommand(input);
         }
-
-
-
-
-
-
 
 
 

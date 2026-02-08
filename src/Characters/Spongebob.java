@@ -40,4 +40,9 @@ public class Spongebob {
     public GameData getData() {
         return data;
     }
+
+    public String heal(int index){
+        health+=index;
+        return "HP: "+health;
+    }
 }
