@@ -46,4 +46,10 @@ public class GameData {
         }
         throw new IllegalArgumentException("Neexistuje npc s id: "+id);
     }
+    public Item findItem(String id){
+        for (Item item : items){
+            if (item.getId().equals(id)) return item;
+        }
+        throw new IllegalArgumentException("Neexistuje item s id: " + id);
+    }
 }

@@ -1,6 +1,7 @@
 package Planets;
 
-import Characters.Nepritele.Enemy;
+import Characters.NPC.NPC;
+import Items.Item;
 
 import java.util.ArrayList;
 
@@ -11,8 +12,8 @@ public class Planet {
     private String enemy;
     private boolean conquered;
     private ArrayList<String> neighbours;
-    private ArrayList<String> items;
-    private ArrayList<String> npcs;
+    private ArrayList<Item> items;
+    private ArrayList<NPC> npcs;
 
     public String getName() {
         return name;
@@ -34,11 +35,11 @@ public class Planet {
         return neighbours;
     }
 
-    public ArrayList<String> getItems() {
+    public ArrayList<Item> getItems() {
         return items;
     }
 
-    public ArrayList<String> getNpcs() {
+    public ArrayList<NPC> getNpcs() {
         return npcs;
     }
 
@@ -80,11 +81,20 @@ public class Planet {
         this.neighbours = neighbours;
     }
 
-    public void setItems(ArrayList<String> items) {
+    public void setItems(ArrayList<Item> items) {
         this.items = items;
     }
 
-    public void setNpcs(ArrayList<String> npcs) {
+    public void setNpcs(ArrayList<NPC> npcs) {
         this.npcs = npcs;
+    }
+    public Item removeItem(String id){
+        for (Item item :items ){
+            if  (item.getId().equals(id)){
+                items.remove(item);
+                return item;
+            }
+        }
+        return null;
     }
 }
