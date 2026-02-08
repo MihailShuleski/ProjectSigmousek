@@ -27,8 +27,10 @@ public class Item {
     public String getInfo() {
         return info;
     }
-
-
+    public void pouzij(Spongebob spongebob){
+        ItemBehaviour behaviour=ChooseItem.getBehaviour(type);
+        behaviour.pouzij(this,spongebob);
+    }
 };
 
 

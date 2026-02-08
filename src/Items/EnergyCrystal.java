@@ -2,13 +2,11 @@ package Items;
 
 import Characters.Spongebob;
 
-public class EnergyCrystal extends Item{
-    public EnergyCrystal(String id, String name, String type, String info) {
-        super(id);
-    }
+public class EnergyCrystal implements ItemBehaviour{
+
 
     @Override
-    public void pouzij(Spongebob spongebob) {
-
+    public void pouzij(Item item, Spongebob spongebob) {
+        System.out.println("Použil jsi: "+item.getName());
     }
 }

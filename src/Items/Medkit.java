@@ -2,12 +2,12 @@ package Items;
 
 import Characters.Spongebob;
 
-public class Medkit extends Item{
-    Spongebob spongebob=new Spongebob();
+public class Medkit implements ItemBehaviour{
 
 
     @Override
-    public void pouzij(Spongebob spongebob) {
-
+    public void pouzij(Item item, Spongebob spongebob) {
+        spongebob.heal(30);
+        System.out.println("Použil jsi: "+item.getName());
     }
 }

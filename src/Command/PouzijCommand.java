@@ -26,7 +26,8 @@ public class PouzijCommand implements Command{
             System.out.println("Tenhle item nemáš");
             return;
         }
-        
+        item.pouzij(spongebob);
+        spongebob.getInventory().odebratItem(item);
 
 
 

@@ -2,13 +2,11 @@ package Items;
 
 import Characters.Spongebob;
 
-public class DataKey extends Item {
-    public DataKey(String id, String name, String type, String info) {
-        super(id);
-    }
+public class DataKey implements ItemBehaviour {
+
 
     @Override
-    public void pouzij(Spongebob spongebob) {
-
+    public void pouzij(Item item, Spongebob spongebob) {
+        System.out.println("Použil jsi: "+item.getName());
     }
 }
