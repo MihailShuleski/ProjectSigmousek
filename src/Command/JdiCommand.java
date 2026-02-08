@@ -1,12 +1,15 @@
 package Command;
 
 import Characters.Spongebob;
+import Planets.Planet;
 
 
 public class JdiCommand implements Command{
-    private final Spongebob spongebob;
-    public JdiCommand(Spongebob spongebob){
-        this.spongebob = spongebob;
+    private Spongebob spongebob;
+    public JdiCommand(){
+    }
+    public void setSpongebob(Spongebob spongebob){
+        this.spongebob=spongebob;
     }
     CommandManager commandManager=new CommandManager();
     private String normalizeInput(String input){
@@ -24,17 +27,23 @@ public class JdiCommand implements Command{
           planet += " "+ parts[i];
         }
       String planet1=normalizeInput(planet);
-      String current=spongebob.getData().findPlanet(spongebob.getCurrentPlanet()).getName();//String aby se napsala nazev current planety a ne id
+      Planet current=spongebob.getCurrentPlanet();
 
-      if (spongebob.getData().findPlanet(spongebob.getCurrentPlanet()).getNeighbours().contains(planet1)){
-          spongebob.setCurrentPlanet(planet1);
-          current=spongebob.getData().findPlanet(spongebob.getCurrentPlanet()).getName();
-          System.out.println("Úspěšně jste cestovali na planetu: " + current);
-      } else if (spongebob.getData().findPlanet(spongebob.getCurrentPlanet()).getId().equals(planet1)) {
-          System.out.println("Nemužete cestovat na danou planetu,jelikož už tam jste :)");
-      } else {
-          System.out.println("Na tuto planetu nelze cestovat z aktualni planety: "+current);
-      }
+
+        if (!current.isConquered()) {
+            System.out.println("Nejdřív dokonči tuto planetu.");
+            return;
+        }
+
+        if (!current.getNeighbours().contains(planet1)) {
+            System.out.println("Na tuto planetu se odsud nedá jít.");
+            return;
+        }
+
+        Planet next = spongebob.getData().findPlanet(planet1);
+        spongebob.moveTo(next);
+
+        System.out.println("Dorazil jsi na planetu: " + next.getName());
     }
 
     @Override

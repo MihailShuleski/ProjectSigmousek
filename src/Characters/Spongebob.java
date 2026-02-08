@@ -2,28 +2,23 @@ package Characters;
 
 import Game.GameData;
 import Inventory.Inventory;
+import Planets.Planet;
 
 public class Spongebob {
-    private String name ;
+    private GameData data;
     private int health;
     Inventory inventory;
-    private String currentPlanet;
-    GameData data = GameData.loadGameDataFromResources("/gamedata.json");
+    private Planet currentPlanet;
 
-    public Spongebob() {
-        this.name = "Spongebob";
-        this.health = 100;
-        this.currentPlanet = "terra_prime";
-        this.inventory=new Inventory();
+    public Spongebob(GameData data, Planet startPlanet) {
+        this.data =data;
+        this.currentPlanet=startPlanet;
     }
 
-    public void setCurrentPlanet(String currentPlanet) {
+    public void setCurrentPlanet(Planet currentPlanet) {
         this.currentPlanet = currentPlanet;
     }
 
-    public String getName() {
-        return name;
-    }
 
     public int getHealth() {
         return health;
@@ -33,7 +28,7 @@ public class Spongebob {
         return inventory;
     }
 
-    public String getCurrentPlanet() {
+    public Planet getCurrentPlanet() {
         return currentPlanet;
     }
 
@@ -44,5 +39,16 @@ public class Spongebob {
     public String heal(int index){
         health+=index;
         return "HP: "+health;
+    }
+    public void damage(int dmg){
+        health -=dmg;
+        System.out.println("Ztratil jsi: "+dmg+"HP ,zbývají ti: "+health);
+        if(health<= 0){
+            System.out.println("Zemřel jsi. Konec hry :(");
+            System.exit(100);
+        }
+    }
+    public void moveTo(Planet planet){
+        currentPlanet=planet;
     }
 }

@@ -16,6 +16,12 @@ public class Planet {
     private ArrayList<NPC> npcs=new ArrayList<>();
     private ArrayList<Puzzle> puzzles=new ArrayList<>();
 
+    public Planet(String id, String name, String info) {
+        this.id = id;
+        this.name = name;
+        this.info = info;
+    }
+
     public String getName() {
         return name;
     }
@@ -69,9 +75,6 @@ public class Planet {
         this.items = items;
     }
 
-    public void setNpcs(ArrayList<NPC> npcs) {
-        this.npcs = npcs;
-    }
     public Item removeItem(String id){
         for (Item item :items ){
             if  (item.getId().equals(id)){
