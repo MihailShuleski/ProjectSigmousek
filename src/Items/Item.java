@@ -28,6 +28,7 @@ public class Item {
         return info;
     }
 
-    public void pouzij(Spongebob spongebob){};
 
-}
+};
+
+
