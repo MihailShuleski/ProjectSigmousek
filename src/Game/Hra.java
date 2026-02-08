@@ -25,13 +25,14 @@ public class Hra {
         commandManager.addCommand("pouzij",new PouzijCommand());
         commandManager.addCommand("hadanka",new HadankaCommand());
         Planet mechaon = world.findPlanet("mechaon");
-        PuzzleLoader.loadPuzzle("PuzzlesMechano.txt", mechaon.getPuzzles());
+        PuzzleLoader.loadPuzzle("/puzzles/mechano.txt", mechaon.getPuzzles());
         Planet brutalis =world.findPlanet("brutalis");
-        PuzzleLoader.loadPuzzle("/PuzzlesKragg.txt",brutalis.getPuzzles());
+        PuzzleLoader.loadPuzzle("/puzzles/kragg.txt",brutalis.getPuzzles());
         Planet mentara= world.findPlanet("mentara");
-        PuzzleLoader.loadPuzzle("/PuzzlesMyron.txt",mentara.getPuzzles());
+        PuzzleLoader.loadPuzzle("/puzzles/myron.txt",mentara.getPuzzles());
         Planet core=world.findPlanet("galactic_core");
-        PuzzleLoader.loadPuzzle("/PuzzlesMyron.txt",core.getPuzzles());
+        PuzzleLoader.loadPuzzle("/puzzles/nox.txt",core.getPuzzles());
+
 
     }
     public void start(){

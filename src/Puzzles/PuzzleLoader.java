@@ -7,17 +7,17 @@ import java.util.List;
 
 public class PuzzleLoader {
 
-    public static void loadPuzzle(String resourcePath,List<Puzzle> puzzles) {
-        puzzles=new ArrayList<>();
-        try (
-                InputStream is = PuzzleLoader.class.getResourceAsStream(resourcePath);
-                BufferedReader br = new BufferedReader(new InputStreamReader(is, StandardCharsets.UTF_8))
-        ) {
+    public static void loadPuzzle(String resourcePath, List<Puzzle> puzzles) {
 
-            if (is == null) {
-                System.out.println("Soubor " + resourcePath + " neexistuje");
-                return;
-            }
+        InputStream is = PuzzleLoader.class.getResourceAsStream(resourcePath);
+
+        if (is == null) {
+            System.out.println("Soubor nenalezen: " + resourcePath);
+            return;
+        }
+
+        try (BufferedReader br = new BufferedReader(
+                new InputStreamReader(is, StandardCharsets.UTF_8))) {
 
             String question;
             String answer;
@@ -28,16 +28,20 @@ public class PuzzleLoader {
                 answer = br.readLine();
                 damageLine = br.readLine();
 
+                if (answer == null || damageLine == null) {
+                    System.out.println("Chybný formát souboru: " + resourcePath);
+                    break;
+                }
 
                 int damage = Integer.parseInt(damageLine);
                 puzzles.add(new Puzzle(question, answer, damage));
             }
 
-        } catch (IOException e) {
-            System.out.println("Problém se souborem: " + resourcePath);
+        } catch (Exception e) {
+            System.out.println("Chyba při čtení hádanek: " + e.getMessage());
         }
     }
+}
 
-    };
 
 
