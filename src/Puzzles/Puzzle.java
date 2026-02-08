@@ -1,10 +1,5 @@
 package Puzzles;
 
-import Puzzles.Text.PuzzleLoader;
-
-import java.util.ArrayList;
-import java.util.Scanner;
-
 public class Puzzle {
     private String question;
     private String correctAnswer;

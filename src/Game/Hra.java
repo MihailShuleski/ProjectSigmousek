@@ -3,7 +3,8 @@ package Game;
 import Characters.Spongebob;
 import Command.*;
 import Command.CommandManager;
-import Puzzles.CombatPuzzle;
+import Planets.Planet;
+import Puzzles.PuzzleLoader;
 
 import java.util.Scanner;
 
@@ -13,7 +14,6 @@ public class Hra {
     Scanner scanner=new Scanner(System.in);
     CommandManager commandManager = new CommandManager();
     boolean checkWin=false;
-    CombatPuzzle combatPuzzle=new CombatPuzzle();
 
 
     public void inicialization(){
@@ -24,12 +24,18 @@ public class Hra {
         commandManager.addCommand("vezmi",new VezmiCommand(spongebob));
         commandManager.addCommand("pouzij",new PouzijCommand(spongebob));
         commandManager.addCommand("hadanka",new HadankaCommand());
+        Planet mechaon = world.findPlanet("mechaon");
+        PuzzleLoader.loadPuzzle("PuzzlesMechano.txt", mechaon.getPuzzles());
+        Planet brutalis =world.findPlanet("brutalis");
+        PuzzleLoader.loadPuzzle("/PuzzlesKragg.txt",brutalis.getPuzzles());
+        Planet mentara= world.findPlanet("mentara");
+        PuzzleLoader.loadPuzzle("/PuzzlesMyron.txt",mentara.getPuzzles());
+        Planet core=world.findPlanet("galactic_core");
+        PuzzleLoader.loadPuzzle("/PuzzlesMyron.txt",core.getPuzzles());
 
     }
     public void start(){
         inicialization();
-        combatPuzzle.loadPuzzles();
-        System.out.println(combatPuzzle.getCombatPuzzles());
         while (checkWin == false){
             System.out.print("Zadejte příkaz: ");
             String input= scanner.nextLine();

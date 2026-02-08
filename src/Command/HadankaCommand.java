@@ -2,6 +2,10 @@ package Command;
 
 import Characters.Spongebob;
 import Game.Hra;
+import Planets.Planet;
+import Puzzles.Puzzle;
+
+import java.util.Scanner;
 
 public class HadankaCommand implements Command{
     Spongebob spongebob;
@@ -12,7 +16,29 @@ public class HadankaCommand implements Command{
     }
     @Override
     public void execute(String[] parts) {
-        System.out.println("Zacala se boj na planetě: "+spongebob.getCurrentPlanet());
+
+        Planet p = spongebob.getCurrentPlanet();
+
+        if (p.getPuzzles().isEmpty()) {
+            System.out.println("Na této planetě už žádná hádanka není.");
+            return;
+        }
+
+        Puzzle puzzle = p.getPuzzles().get(0);
+        puzzle.start();
+
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Odpověď: ");
+        String input = sc.nextLine();
+
+        if (puzzle.checkAnswer(input)) {
+            System.out.println("Správně!");
+            p.getPuzzles().remove(puzzle);
+            p.setConquered(true);
+        } else {
+            System.out.println("Špatně!");
+            spongebob.damage(puzzle.getDamage());
+        }
     }
 
     @Override
