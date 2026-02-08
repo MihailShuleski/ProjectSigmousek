@@ -2,6 +2,7 @@ package Planets;
 
 import Characters.NPC.NPC;
 import Items.Item;
+import Puzzles.Puzzle;
 
 import java.util.ArrayList;
 
@@ -9,11 +10,11 @@ public class Planet {
     private String id;
     private String name;
     private String info;
-    private String enemy;
-    private boolean conquered;
-    private ArrayList<String> neighbours;
-    private ArrayList<Item> items;
-    private ArrayList<NPC> npcs;
+    private boolean conquered= false;
+    private ArrayList<String> neighbours=new ArrayList<>();
+    private ArrayList<Item> items=new ArrayList<>();
+    private ArrayList<NPC> npcs=new ArrayList<>();
+    private ArrayList<Puzzle> puzzles=new ArrayList<>();
 
     public String getName() {
         return name;
@@ -23,9 +24,6 @@ public class Planet {
         return info;
     }
 
-    public String getEnemy() {
-        return enemy;
-    }
 
     public boolean isConquered() {
         return conquered;
@@ -43,16 +41,6 @@ public class Planet {
         return npcs;
     }
 
-    public void prozkoumej(){
-        //TODO pridat metodu pro prozkoumani planety
-    }
-    public void zacitBoj(){
-        //TODO pridat metodu pro zacinani fightu
-    }
-    public void ovladni(){
-        //TODO pridat metodu pro ovladnuti dane planety
-    }
-
     public String getId() {
         return id;
     }
@@ -67,10 +55,6 @@ public class Planet {
 
     public void setInfo(String info) {
         this.info = info;
-    }
-
-    public void setEnemy(String enemy) {
-        this.enemy = enemy;
     }
 
     public void setConquered(boolean conquered) {
@@ -96,5 +80,11 @@ public class Planet {
             }
         }
         return null;
+    }
+    public void addNeighbour(String id){
+        neighbours.add(id);
+    }
+    public boolean hasUnsolved(){
+        return !puzzles.isEmpty();
     }
 }
