@@ -29,7 +29,4 @@ public class NPC {
         return dialogue;
     }
 
-    public void mluv(){
-        //TODO pridat metodu pro dialog s danym NPC
-    }
 }

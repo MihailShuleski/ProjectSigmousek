@@ -19,10 +19,10 @@ public class Hra {
     public void inicialization(){
         world = GameData.loadGameDataFromResources("/gamedata.json");
         commandManager.addCommand("jdi",new JdiCommand());
-        commandManager.addCommand("mluv",new MluvCommand(spongebob));
+        commandManager.addCommand("mluv",new MluvCommand());
         commandManager.addCommand("prozkoumej",new ProzkoumejCommand());
-        commandManager.addCommand("vezmi",new VezmiCommand(spongebob));
-        commandManager.addCommand("pouzij",new PouzijCommand(spongebob));
+        commandManager.addCommand("vezmi",new VezmiCommand());
+        commandManager.addCommand("pouzij",new PouzijCommand());
         commandManager.addCommand("hadanka",new HadankaCommand());
         Planet mechaon = world.findPlanet("mechaon");
         PuzzleLoader.loadPuzzle("PuzzlesMechano.txt", mechaon.getPuzzles());

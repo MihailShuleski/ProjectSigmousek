@@ -5,7 +5,9 @@ import Items.Item;
 
 public class PouzijCommand implements Command{
     Spongebob spongebob;
-    public PouzijCommand(Spongebob spongebob){
+    public PouzijCommand(){
+    }
+    public void setSpongebob(Spongebob spongebob){
         this.spongebob=spongebob;
     }
     private String normalizeInput(String input){
