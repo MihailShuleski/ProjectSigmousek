@@ -4,8 +4,10 @@ import Characters.Spongebob;
 import Game.Hra;
 
 public class HadankaCommand implements Command{
-    Spongebob spongebob =new Spongebob();
-    public HadankaCommand(Spongebob spongebob){
+    Spongebob spongebob;
+    public HadankaCommand(){
+    }
+    public void setSpongebob(Spongebob spongebob){
         this.spongebob=spongebob;
     }
     @Override

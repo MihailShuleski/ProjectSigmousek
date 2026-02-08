@@ -75,6 +75,10 @@ public class Planet {
         this.items = items;
     }
 
+    public ArrayList<Puzzle> getPuzzles() {
+        return puzzles;
+    }
+
     public Item removeItem(String id){
         for (Item item :items ){
             if  (item.getId().equals(id)){

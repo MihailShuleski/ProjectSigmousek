@@ -17,14 +17,13 @@ public class Hra {
 
 
     public void inicialization(){
-        spongebob =new Spongebob();
         world = GameData.loadGameDataFromResources("/gamedata.json");
-        commandManager.addCommand("jdi",new JdiCommand(spongebob));
+        commandManager.addCommand("jdi",new JdiCommand());
         commandManager.addCommand("mluv",new MluvCommand(spongebob));
-        commandManager.addCommand("prozkoumej",new ProzkoumejCommand(spongebob));
+        commandManager.addCommand("prozkoumej",new ProzkoumejCommand());
         commandManager.addCommand("vezmi",new VezmiCommand(spongebob));
         commandManager.addCommand("pouzij",new PouzijCommand(spongebob));
-        commandManager.addCommand("hadanka",new HadankaCommand(spongebob));
+        commandManager.addCommand("hadanka",new HadankaCommand());
 
     }
     public void start(){
