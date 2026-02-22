@@ -9,8 +9,6 @@ public class JdiCommand implements Command{
     public JdiCommand(Spongebob spongebob){
         this.spongebob=spongebob;
     }
-
-    CommandManager commandManager=new CommandManager();
     private String normalizeInput(String input){
         return input.trim().toLowerCase().replace(" ","_");
     }

@@ -5,7 +5,7 @@ import Items.Item;
 import java.util.ArrayList;
 
 public class Inventory {
-    private int capacity = 4;
+    private int capacity = 5;
     public ArrayList<Item> items = new ArrayList<>(capacity);
 
     public void pridatItem(Item item) {

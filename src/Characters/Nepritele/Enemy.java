@@ -36,6 +36,10 @@ public class Enemy {
     public String getDialogue() {
         return dialogue;
     }
+    public void vypisDialog() {
+        System.out.println(getName() + " (" + getHp() + " HP):");
+        System.out.println(getDialogue());
+    }
 
     public void udelatDamage(){};
 

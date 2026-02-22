@@ -46,4 +46,11 @@ public class GameData {
         }
         throw new IllegalArgumentException("Neexistuje npc s id: "+id);
     }
+    public Enemy findEnemy(String id) {
+        if (enemies == null) return null;
+        for (Enemy e : enemies) {
+            if (e.getId().equalsIgnoreCase(id)) return e;
+        }
+        return null;
+    }
 }
