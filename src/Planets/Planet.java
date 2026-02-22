@@ -86,9 +86,11 @@ public class Planet {
     }
 
     public ArrayList<Puzzle> getPuzzles() {
+        if (puzzles == null) {
+            puzzles = new ArrayList<>();
+        }
         return puzzles;
     }
-
     public Item removeItem(String id){
         for (Item item :items ){
             if  (item.getId().equals(id)){
