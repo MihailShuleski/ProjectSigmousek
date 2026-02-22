@@ -9,17 +9,18 @@ public class Inventory {
     public ArrayList<Item> items = new ArrayList<>(capacity);
 
     public void pridatItem(Item item) {
+        if (items.size() >= capacity) {
+            System.out.println("Inventář je plný. Nemůžeš nic dalšího vzít.");
+            return;
+        }
         items.add(item);
-        System.out.println("Byl přidán item: " + item.getName());
-
+        System.out.println("Vzal jsi: " + item.getName());
     }
 
     public void odebratItem(Item item) {
-        if (items.size() < capacity) {
-            items.remove(item);
-            System.out.println("Byl odebran item: " + item.getName());
+        if (items.remove(item)) {
+            System.out.println("Použil jsi: " + item.getName());
         }
-        System.out.println("Inventář je plný :(");
     }
 
     public void inventar() {
