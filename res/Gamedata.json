@@ -33,12 +33,6 @@
       "description": "Planeta plná továren, robotů a obrazovek.",
       "conquered": false,
       "items": [
-        {
-          "id": "energetický_krystal",
-          "name": "Energetický krystal",
-          "type": "boost",
-          "description": "Zvyšuje poškození hádanek."
-        }
       ],
       "npcs": [
         {

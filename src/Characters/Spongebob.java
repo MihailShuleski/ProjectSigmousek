@@ -9,6 +9,7 @@ public class Spongebob {
     private int health=100;
     Inventory inventory=new Inventory();
     private String currentPlanet;
+    private boolean CheckWin=false;
 
     public Spongebob(GameData data, String startPlanet) {
         this.data =data;
@@ -50,5 +51,13 @@ public class Spongebob {
     }
     public void moveTo(String planet){
         currentPlanet=planet;
+    }
+
+    public void setCheckWin(boolean checkWin) {
+        CheckWin = checkWin;
+    }
+
+    public boolean isCheckWin() {
+        return CheckWin;
     }
 }

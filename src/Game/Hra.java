@@ -55,7 +55,7 @@ public class Hra {
                 System.out.println("Zemrel jsi. Konec hry.");
                 break;
             }
-            if (checkWin) {
+            if (((checkWin = true) && (spongebob.isCheckWin())) == true){
                 System.out.println("Vyhral jsi! Ovládl jsi galaxii!");
                 break;
             }
@@ -68,8 +68,6 @@ public class Hra {
             }
             checkWinCondition();
         }
-
-
     }
 
 

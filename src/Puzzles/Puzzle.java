@@ -4,7 +4,6 @@ public class Puzzle {
     private String question;
     private String correctAnswer;
     private int damage; //kazda hadanka bude delat jiny pocet damage ig
-    public Puzzle(){}
 
     public Puzzle(String question, String correctAnswer, int damage) {
         this.question = question;
