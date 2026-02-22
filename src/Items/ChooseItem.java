@@ -10,7 +10,6 @@ public class ChooseItem {
         behaviours.put("info", new RoyalBadge());
         behaviours.put("heal", new Medkit());
         behaviours.put("key", new DataKey());
-        behaviours.put("hint", new HoloScanner());
     }
 
     public static ItemBehaviour getBehaviour(String type){

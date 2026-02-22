@@ -112,14 +112,7 @@
       "name": "Mentara",
       "description": "Planeta chrámů a knihoven.",
       "conquered": false,
-      "items": [
-        {
-          "id": "holografický_skener",
-          "name": "Holografický skener",
-          "type": "hint",
-          "description": "Zobrazí nápovědu."
-        }
-      ],
+      "items": [],
       "npcs": [
         {
           "id": "strážce_chrámu",
