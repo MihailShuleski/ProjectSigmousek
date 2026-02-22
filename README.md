@@ -49,11 +49,12 @@ Hráč zadává příkazy do konzole.
 -prozkoumej
 -inventar
 
-### Příklady:
+## Příklady:
+
 jdi mechaon
 vezmi medkit
 pouzij medkit
----
+
 
 ## 🏗 Architektura projektu
 
