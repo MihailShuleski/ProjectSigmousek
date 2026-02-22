@@ -8,11 +8,10 @@ public class InventarCommand implements Command{
     public InventarCommand(Spongebob spongebob){
         this.spongebob=spongebob;
     }
-    Inventory inventory=new Inventory();
 
     @Override
     public void execute(String[] parts) {
-        inventory.inventar();
+        spongebob.getInventory().inventar();
     }
 
     @Override
