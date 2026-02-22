@@ -40,20 +40,38 @@ public class Hra {
 
     }
 
+    private void checkWinCondition() {
+        Planet core = world.findPlanet("galactic_core");
+        if (core != null && core.isConquered()) {
+            checkWin = true;
+        }
+    }
+
     public void start(){
         inicialization();
+        System.out.println();
+        System.out.println("Project Sigmousek");
+        System.out.println("---------------");
+        System.out.println("Jsi na: " + world.findPlanet(spongebob.getCurrentPlanet()).getName());
+        System.out.println("Prikazy: jdi, mluv, prozkoumej, vezmi, pouzij, hadanka, inventar");
+        System.out.println();
         while (true) {
             if (spongebob.getHealth() <= 0) {
                 System.out.println("Zemrel jsi. Konec hry.");
                 break;
             }
-
-            if (checkWin=false) {
+            if (checkWin) {
                 System.out.println("Vyhral jsi! Ovládl jsi galaxii!");
                 break;
             }
+            Planet p = world.findPlanet(spongebob.getCurrentPlanet());
+            System.out.print("HP: " + spongebob.getHealth() + " | " + p.getName() + " > ");
             String input = scanner.nextLine();
-            commandManager.processCommand(input);
+            if (input != null) input = input.trim();
+            if (input != null && !input.isEmpty()) {
+                commandManager.processCommand(input);
+            }
+            checkWinCondition();
         }
 
 
