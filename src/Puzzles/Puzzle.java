@@ -4,6 +4,7 @@ public class Puzzle {
     private String question;
     private String correctAnswer;
     private int damage; //kazda hadanka bude delat jiny pocet damage ig
+    public Puzzle(){}
 
     public Puzzle(String question, String correctAnswer, int damage) {
         this.question = question;
@@ -24,8 +25,9 @@ public class Puzzle {
         System.out.println(question);
 
     }
-    public boolean checkAnswer(String answer){
-        return answer.equalsIgnoreCase(answer);
+    public boolean checkAnswer(String answer) {
+        return answer != null && correctAnswer != null
+                && answer.trim().equalsIgnoreCase(correctAnswer.trim());
     }
 
 }

@@ -28,15 +28,6 @@ public class Hra {
         commandManager.addCommand("pouzij",new PouzijCommand(spongebob));
         commandManager.addCommand("hadanka",new HadankaCommand(spongebob));
         commandManager.addCommand("inventar",new InventarCommand(spongebob));
-        Planet mechaon=world.findPlanet("mechaon");
-        PuzzleLoader.loadPuzzle("puzzles/mechano", mechaon.getPuzzles());
-        Planet brutalis = world.findPlanet("brutalis");
-        PuzzleLoader.loadPuzzle("puzzles/kragg", brutalis.getPuzzles());
-        Planet mentara = world.findPlanet("mentara");
-        PuzzleLoader.loadPuzzle("puzzles/myron", mentara.getPuzzles());
-        Planet core = world.findPlanet("galactic_core");
-        PuzzleLoader.loadPuzzle("puzzles/nox", core.getPuzzles());
-
 
     }
 
