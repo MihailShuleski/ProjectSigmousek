@@ -1,6 +1,7 @@
 package Command;
 
 import Characters.NPC.NPC;
+import Characters.Nepritele.Enemy;
 import Characters.Spongebob;
 import Planets.Planet;
 
@@ -17,10 +18,16 @@ public class MluvCommand implements Command{
     public void execute(String[] parts) {
         Planet current=spongebob.getData().findPlanet(spongebob.getCurrentPlanet());
         if(parts.length<2){
-            System.out.println("Musíš napsat s kym chces mluvit(Ex. mluv *NPC*");
-            System.out.println("Dostupné NPCs: ");
-            for (NPC npc:current.getNpcs()){
-                System.out.println("- "+npc.getName());
+            System.out.println("Musíš napsat s kým chceš mluvit (např. mluv *jméno*)");
+            System.out.println("Dostupné postavy:");
+            for (NPC npc : current.getNpcs()) {
+                System.out.println("- " + npc.getName());
+            }
+            if (current.getEnemyId() != null && !current.getEnemyId().isEmpty()) {
+                Enemy e = spongebob.getData().findEnemy(current.getEnemyId());
+                if (e != null && !current.getPuzzles().isEmpty()) {
+                    System.out.println("- " + e.getName() + " (nepřítel)");
+                }
             }
             return;
         }
@@ -36,8 +43,17 @@ public class MluvCommand implements Command{
                 return;
             }
         }
-        System.out.println("Tenhle NPC neexistuje na planetě: "+current.getName());
+
+        if (current.getEnemyId() != null && spongebob.getData().findEnemy(current.getEnemyId()) != null
+                && spongebob.getData().findEnemy(current.getEnemyId()).getId().equals(npc1)) {
+            Enemy enemy = spongebob.getData().findEnemy(current.getEnemyId());
+            enemy.vypisDialog();
+            return;
+        }
+
+        System.out.println("Tato postava na planetě není: " + current.getName());
     }
+
 
     @Override
     public boolean exit() {

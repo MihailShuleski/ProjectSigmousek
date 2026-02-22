@@ -1,5 +1,6 @@
 package Command;
 
+import Characters.Nepritele.Enemy;
 import Characters.Spongebob;
 import Game.Hra;
 import Planets.Planet;
@@ -21,6 +22,15 @@ public class HadankaCommand implements Command{
             System.out.println("Na této planetě už žádná hádanka není.");
             return;
         }
+        if (p.getEnemyId() != null && !p.getEnemyId().isEmpty()) {
+            Enemy enemy = spongebob.getData().findEnemy(p.getEnemyId());
+            if (enemy != null) {
+                System.out.println("Před tebou stojí " + enemy.getName() + " (" + enemy.getHp() + " HP).");
+                enemy.vypisDialog();
+                System.out.println();
+            }
+        }
+
 
         Puzzle puzzle = p.getPuzzles().get(0);
         puzzle.start();
