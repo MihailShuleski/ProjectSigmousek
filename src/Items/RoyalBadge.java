@@ -23,8 +23,6 @@ public class RoyalBadge implements ItemBehaviour{
         System.out.println("RADY PRO HRU:");
         System.out.println("- Hádanky ti mohou ubrat HP, ale také posunout příběh dál.");
         System.out.println("- Než vstoupíš do galaktického jádra, ujisti se, že jsi připraven.");
-        System.out.println();
-        System.out.println("Odznak můžeš kdykoli znovu použít pro připomenutí návodu.");
     }
     }
 

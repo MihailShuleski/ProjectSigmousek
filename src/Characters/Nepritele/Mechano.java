@@ -9,5 +9,4 @@ public class Mechano extends Enemy {
     public void udelatDamage() {
 
     }
-    //TODO pridat vlastnosti u vsech nerpitelu
 }
