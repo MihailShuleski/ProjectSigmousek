@@ -1,6 +1,7 @@
 package Command;
 
 import Characters.NPC.NPC;
+import Characters.Nepritele.Enemy;
 import Characters.Spongebob;
 import Items.Item;
 import Planets.Planet;
@@ -35,8 +36,14 @@ public class ProzkoumejCommand implements Command{
         for (NPC npc : planet.getNpcs()) {
             System.out.println("- " + npc.getName());
         }
-
+        if (planet.getEnemyId() != null && !planet.getEnemyId().isEmpty()) {
+            Enemy e = spongebob.getData().findEnemy(planet.getEnemyId());
+            if (e != null && !planet.getPuzzles().isEmpty()) {
+                System.out.println("Nepřítel: " + e.getName() + " (" + e.getHp() + " HP)");
+            }
         }
+    }
+
 
     @Override
     public boolean exit() {
