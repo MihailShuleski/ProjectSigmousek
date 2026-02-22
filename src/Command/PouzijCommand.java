@@ -9,6 +9,7 @@ public class PouzijCommand implements Command{
         this.spongebob=spongebob;
     }
 
+
     private String normalizeInput(String input){
         return input.trim().toLowerCase().replace(" ","_");
     }
@@ -22,8 +23,9 @@ public class PouzijCommand implements Command{
         for (int i= 2;i<parts.length;i++){
             itemID += " "+ parts[i];
         }
-        Item item=spongebob.getInventory().findItem(itemID);
-        if (item.equals(null)){
+        String id=normalizeInput(itemID);
+        Item item=spongebob.getInventory().findItem(id);
+        if (item == null){
             System.out.println("Tenhle item nemáš");
             return;
         }

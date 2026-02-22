@@ -10,6 +10,7 @@ public class ChooseItem {
         behaviours.put("medkit",new Medkit());
         behaviours.put("datový_klíč_galaxie",new DataKey());
         behaviours.put("holografický_skener",new HoloScanner());
+        behaviours.put("královský_odznak",new RoyalBadge());
     }
 
     public static ItemBehaviour getBehaviour(String type){
