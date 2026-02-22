@@ -7,10 +7,10 @@ public class ChooseItem {
     private static final Map<String,ItemBehaviour> behaviours=new HashMap<>();
 
     static {
-        behaviours.put("medkit",new Medkit());
-        behaviours.put("datový_klíč_galaxie",new DataKey());
-        behaviours.put("holografický_skener",new HoloScanner());
-        behaviours.put("královský_odznak",new RoyalBadge());
+        behaviours.put("info", new RoyalBadge());
+        behaviours.put("heal", new Medkit());
+        behaviours.put("key", new DataKey());
+        behaviours.put("hint", new HoloScanner());
     }
 
     public static ItemBehaviour getBehaviour(String type){
