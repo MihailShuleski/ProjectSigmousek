@@ -28,6 +28,7 @@ public class Hra {
         commandManager.addCommand("pouzij",new PouzijCommand(spongebob));
         commandManager.addCommand("hadanka",new HadankaCommand(spongebob));
         commandManager.addCommand("inventar",new InventarCommand(spongebob));
+        commandManager.addCommand("konec",new KonecCommand());
 
     }
 
