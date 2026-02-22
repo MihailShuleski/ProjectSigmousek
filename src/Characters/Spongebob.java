@@ -6,16 +6,16 @@ import Planets.Planet;
 
 public class Spongebob {
     private GameData data;
-    private int health;
-    Inventory inventory;
-    private Planet currentPlanet;
+    private int health=100;
+    Inventory inventory=new Inventory();
+    private String currentPlanet;
 
-    public Spongebob(GameData data, Planet startPlanet) {
+    public Spongebob(GameData data, String startPlanet) {
         this.data =data;
         this.currentPlanet=startPlanet;
     }
 
-    public void setCurrentPlanet(Planet currentPlanet) {
+    public void setCurrentPlanet(String currentPlanet) {
         this.currentPlanet = currentPlanet;
     }
 
@@ -28,7 +28,7 @@ public class Spongebob {
         return inventory;
     }
 
-    public Planet getCurrentPlanet() {
+    public String getCurrentPlanet() {
         return currentPlanet;
     }
 
@@ -48,7 +48,7 @@ public class Spongebob {
             System.exit(100);
         }
     }
-    public void moveTo(Planet planet){
+    public void moveTo(String planet){
         currentPlanet=planet;
     }
 }

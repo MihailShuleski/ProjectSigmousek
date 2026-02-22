@@ -5,11 +5,10 @@ import Items.Item;
 
 public class PouzijCommand implements Command{
     Spongebob spongebob;
-    public PouzijCommand(){
-    }
-    public void setSpongebob(Spongebob spongebob){
+    public PouzijCommand(Spongebob spongebob){
         this.spongebob=spongebob;
     }
+
     private String normalizeInput(String input){
         return input.trim().toLowerCase().replace(" ","_");
     }
@@ -23,14 +22,13 @@ public class PouzijCommand implements Command{
         for (int i= 2;i<parts.length;i++){
             itemID += " "+ parts[i];
         }
-        Item item=spongebob.getInventory().getItem(itemID);
+        Item item=spongebob.getInventory().findItem(itemID);
         if (item.equals(null)){
             System.out.println("Tenhle item nemáš");
             return;
         }
         item.pouzij(spongebob);
         spongebob.getInventory().odebratItem(item);
-
 
 
     }

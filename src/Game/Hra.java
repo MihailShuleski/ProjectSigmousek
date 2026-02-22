@@ -18,28 +18,41 @@ public class Hra {
 
     public void inicialization(){
         world = GameData.loadGameDataFromResources("/gamedata.json");
-        commandManager.addCommand("jdi",new JdiCommand());
-        commandManager.addCommand("mluv",new MluvCommand());
-        commandManager.addCommand("prozkoumej",new ProzkoumejCommand());
-        commandManager.addCommand("vezmi",new VezmiCommand());
-        commandManager.addCommand("pouzij",new PouzijCommand());
-        commandManager.addCommand("hadanka",new HadankaCommand());
+        spongebob = new Spongebob(world, "terra_prime");
+
+
+        commandManager.addCommand("jdi",new JdiCommand(spongebob));
+        commandManager.addCommand("mluv",new MluvCommand(spongebob));
+        commandManager.addCommand("prozkoumej",new ProzkoumejCommand(spongebob));
+        commandManager.addCommand("vezmi",new VezmiCommand(spongebob));
+        commandManager.addCommand("pouzij",new PouzijCommand(spongebob));
+        commandManager.addCommand("hadanka",new HadankaCommand(spongebob));
+        commandManager.addCommand("inventar",new InventarCommand(spongebob));
         Planet mechaon = world.findPlanet("mechaon");
-        PuzzleLoader.loadPuzzle("/puzzles/mechano.txt", mechaon.getPuzzles());
+        PuzzleLoader.loadPuzzle("/puzzles/mechano", mechaon.getPuzzles());
         Planet brutalis =world.findPlanet("brutalis");
-        PuzzleLoader.loadPuzzle("/puzzles/kragg.txt",brutalis.getPuzzles());
+        PuzzleLoader.loadPuzzle("/puzzles/kragg",brutalis.getPuzzles());
         Planet mentara= world.findPlanet("mentara");
-        PuzzleLoader.loadPuzzle("/puzzles/myron.txt",mentara.getPuzzles());
+        PuzzleLoader.loadPuzzle("/puzzles/myron",mentara.getPuzzles());
         Planet core=world.findPlanet("galactic_core");
-        PuzzleLoader.loadPuzzle("/puzzles/nox.txt",core.getPuzzles());
+        PuzzleLoader.loadPuzzle("/puzzles/nox",core.getPuzzles());
 
 
     }
+
     public void start(){
         inicialization();
-        while (checkWin == false){
-            System.out.print("Zadejte příkaz: ");
-            String input= scanner.nextLine();
+        while (true) {
+            if (spongebob.getHealth() <= 0) {
+                System.out.println("Zemrel jsi. Konec hry.");
+                break;
+            }
+
+            if (checkWin=false) {
+                System.out.println("Vyhral jsi! Ovládl jsi galaxii!");
+                break;
+            }
+            String input = scanner.nextLine();
             commandManager.processCommand(input);
         }
 

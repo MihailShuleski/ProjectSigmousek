@@ -9,15 +9,13 @@ import java.util.Scanner;
 
 public class HadankaCommand implements Command{
     Spongebob spongebob;
-    public HadankaCommand(){
-    }
-    public void setSpongebob(Spongebob spongebob){
+    public HadankaCommand(Spongebob spongebob){
         this.spongebob=spongebob;
     }
     @Override
     public void execute(String[] parts) {
 
-        Planet p = spongebob.getCurrentPlanet();
+        Planet p = spongebob.getData().findPlanet(spongebob.getCurrentPlanet());
 
         if (p.getPuzzles().isEmpty()) {
             System.out.println("Na této planetě už žádná hádanka není.");
@@ -38,6 +36,7 @@ public class HadankaCommand implements Command{
         } else {
             System.out.println("Špatně!");
             spongebob.damage(puzzle.getDamage());
+            System.out.println("Ztratil jsi " + puzzle.getDamage() + " HP");
         }
     }
 

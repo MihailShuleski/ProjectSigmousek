@@ -88,9 +88,15 @@ public class Planet {
         }
         return null;
     }
-    public void addNeighbour(String id){
-        neighbours.add(id);
+    public Item findItem(String id) {
+        for (Item i : items) {
+            if (i.getId().equalsIgnoreCase(id)) {
+                return i;
+            }
+        }
+        return null;
     }
+
     public boolean hasUnsolved(){
         return !puzzles.isEmpty();
     }

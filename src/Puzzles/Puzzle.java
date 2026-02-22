@@ -13,7 +13,12 @@ public class Puzzle {
     public int getDamage() {
         return damage;
     }
-
+    public String getCorrectAnswer(){
+        return correctAnswer;
+    }
+    public String getQuestion(){
+        return question;
+    }
     public void start(){
         System.out.println("Hádanka: ");
         System.out.println(question);

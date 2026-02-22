@@ -41,10 +41,11 @@ public class Inventory {
         }
     }
 
-    public Item getItem(String id) {
+    public Item findItem(String id) {
         for (Item i : items) {
-            if (i.getId().equals(id)) return i;
+            if (i.getId().equalsIgnoreCase(id)) {
+                return i;
+            }
         }
         return null;
-    }
-}
+    }}

@@ -7,6 +7,9 @@ public class DataKey implements ItemBehaviour {
 
     @Override
     public void pouzij(Item item, Spongebob spongebob) {
-        System.out.println("Použil jsi: "+item.getName());
-    }
-}
+        if (spongebob.getCurrentPlanet().equals("galactic_core")) {
+            System.out.println("Aktivoval jsi hlavni system!");
+        } else {
+            System.out.println("Tady to nema efekt.");
+        }
+}}

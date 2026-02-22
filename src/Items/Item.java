@@ -32,5 +32,3 @@ public class Item {
         behaviour.pouzij(this,spongebob);
     }
 };
-
-

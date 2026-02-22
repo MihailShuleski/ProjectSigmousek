@@ -20,10 +20,10 @@
       ],
       "npcs": [
         {
-        "id": "královský_rádce",
-        "name": "Královský rádce",
-        "dialogue": "Pamatuj, ne každá bitva se vyhrává silou."
-      }
+          "id": "královský_rádce",
+          "name": "Královský rádce",
+          "dialogue": "Pamatuj, ne každá bitva se vyhrává silou."
+        }
       ],
       "neighbours": ["mechaon"]
     },
@@ -34,11 +34,11 @@
       "conquered": false,
       "items": [
         {
-        "id": "energetický_krystal",
-        "name": "Energetický krystal",
-        "type": "boost",
-        "description": "Zvyšuje poškození hádanek."
-      }
+          "id": "energetický_krystal",
+          "name": "Energetický krystal",
+          "type": "boost",
+          "description": "Zvyšuje poškození hádanek."
+        }
       ],
       "npcs": [
         {
@@ -96,10 +96,10 @@
       ],
       "npcs": [
         {
-        "id": "strážce_chrámu",
-        "name": "Strážce chrámu",
-        "dialogue": "Trpělivost je klíčem k poznání."
-      },
+          "id": "strážce_chrámu",
+          "name": "Strážce chrámu",
+          "dialogue": "Trpělivost je klíčem k poznání."
+        },
         {
           "id": "knihovník_moudrosti",
           "name": "Knihovník moudrosti",
@@ -115,18 +115,18 @@
       "conquered": false,
       "items": [
         {
-        "id": "datový_klíč_galaxie",
-        "name": "Datový klíč galaxie",
-        "type": "key",
-        "description": "Důkaz ovládnutí planety."
-      }
+          "id": "datový_klíč_galaxie",
+          "name": "Datový klíč galaxie",
+          "type": "key",
+          "description": "Důkaz ovládnutí planety."
+        }
       ],
       "npcs": [
         {
-        "id": "ztracený_poutník",
-        "name": "Ztracený poutník",
-        "dialogue": "V jádru galaxie se ztrácí čas."
-      },
+          "id": "ztracený_poutník",
+          "name": "Ztracený poutník",
+          "dialogue": "V jádru galaxie se ztrácí čas."
+        },
         {
           "id": "starý_kronikář",
           "name": "Starý kronikář",

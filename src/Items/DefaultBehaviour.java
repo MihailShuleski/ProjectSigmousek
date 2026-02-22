@@ -1,5 +1,6 @@
 package Items;
 
+
 import Characters.Spongebob;
 
 public class DefaultBehaviour implements ItemBehaviour{

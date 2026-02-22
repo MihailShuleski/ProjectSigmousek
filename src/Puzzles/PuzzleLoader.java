@@ -17,7 +17,7 @@ public class PuzzleLoader {
         }
 
         try (BufferedReader br = new BufferedReader(
-                new InputStreamReader(is, StandardCharsets.UTF_8))) {
+                new InputStreamReader(is))) {
 
             String question;
             String answer;
@@ -42,6 +42,3 @@ public class PuzzleLoader {
         }
     }
 }
-
-
-

@@ -6,24 +6,21 @@ import Planets.Planet;
 
 public class VezmiCommand implements Command{
     Spongebob spongebob;
-    public VezmiCommand(){
+    public VezmiCommand(Spongebob spongebob){
+        this.spongebob=spongebob;
     }
-
-    public void setSpongebob(Spongebob spongebob) {
-        this.spongebob = spongebob;
-    }
-
     private String normalizeInput(String input){
         return input.trim().toLowerCase().replace(" ","_");
     }
     @Override
     public void execute(String[] parts) {
-        Planet current=spongebob.getCurrentPlanet();
+        Planet current=spongebob.getData().findPlanet(spongebob.getCurrentPlanet());
         if (parts.length < 2) {
             System.out.println("Musíš napsat co chceš vzít(Ex. vezmi *item*");
             return;
         }
         String itemID=parts[1];
+
         for (int i= 2;i<parts.length;i++){
             itemID += " "+ parts[i];
         }
@@ -36,7 +33,7 @@ public class VezmiCommand implements Command{
             }
         }
         if (foundItem == null) {
-            System.out.println("Tento předmět tu není.");
+            System.out.println("Tento item tu není.");
             return;
         }
 

@@ -6,7 +6,8 @@ import Planets.Planet;
 
 public class MluvCommand implements Command{
     Spongebob spongebob;
-    public MluvCommand(){
+    public MluvCommand(Spongebob spongebob){
+        this.spongebob=spongebob;
     }
 
     private String normalizeInput(String input){
@@ -14,7 +15,7 @@ public class MluvCommand implements Command{
     }
     @Override
     public void execute(String[] parts) {
-        Planet current=spongebob.getCurrentPlanet();
+        Planet current=spongebob.getData().findPlanet(spongebob.getCurrentPlanet());
         if(parts.length<2){
             System.out.println("Musíš napsat s kym chces mluvit(Ex. mluv *NPC*");
             System.out.println("Dostupné NPCs: ");
@@ -29,7 +30,7 @@ public class MluvCommand implements Command{
         }
         String npc1=normalizeInput(npcId);
         for (NPC npc :current.getNpcs()) {
-            if (npc.getId().equals(npcId)) {
+            if (npc.getId().equals(npc1)) {
                 System.out.println(npc.getName() + ":");
                 System.out.println(npc.getDialogue());
                 return;
