@@ -6,6 +6,7 @@ import Game.Hra;
 import Planets.Planet;
 import Puzzles.Puzzle;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class HadankaCommand implements Command{
@@ -31,23 +32,11 @@ public class HadankaCommand implements Command{
             }
         }
 
+        Random rd = new Random();
 
-        Puzzle puzzle = p.getPuzzles().get(0);
-        puzzle.start();
+        Puzzle puzzle = p.getPuzzles().get(rd.nextInt(0, 10));
+        puzzle.start(puzzle,p,spongebob);
 
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Odpověď: ");
-        String input = sc.nextLine();
-
-        if (puzzle.checkAnswer(input)) {
-            System.out.println("Správně!");
-            p.getPuzzles().remove(puzzle);
-            p.setConquered(true);
-        } else {
-            System.out.println("Špatně!");
-            spongebob.damage(puzzle.getDamage());
-            System.out.println("Ztratil jsi " + puzzle.getDamage() + " HP");
-        }
     }
 
     @Override
