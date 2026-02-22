@@ -110,12 +110,12 @@ Každý předmět má vlastní metodu use() (polymorfismus)
 Některé předměty léčí, jiné jsou nutné pro výhru
 
 ## 🏆 Výhra a prohra
-# Výhra
+### Výhra
 
 hráč se nachází na finální planetě
 
 použije klíčový předmět (např. DataKey)
 
-# Prohra
+### Prohra
 
 životy hráče klesnou na 0
