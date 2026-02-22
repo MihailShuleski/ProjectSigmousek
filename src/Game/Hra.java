@@ -50,7 +50,7 @@ public class Hra {
     public void start(){
         inicialization();
         System.out.println();
-        System.out.println("Project Sigmousek");
+        System.out.println("Spongebob, Ovládnutí galaxie");
         System.out.println("---------------");
         System.out.println("Jsi na: " + world.findPlanet(spongebob.getCurrentPlanet()).getName());
         System.out.println("Prikazy: jdi, mluv, prozkoumej, vezmi, pouzij, hadanka, inventar");
