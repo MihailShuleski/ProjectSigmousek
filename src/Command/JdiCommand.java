@@ -32,8 +32,8 @@ public class JdiCommand implements Command{
             return;
         }
         Planet planet2 = spongebob.getData().findPlanet(planet1);
-        if (planet2.getEnemyId() != null && !planet2.getEnemyId().isEmpty() && !planet2.isConquered()) {
-            System.out.println("Na " + planet2.getName() + " vládne nepřítel. Nejprve ho poraz (příkaz hadanka).");
+        if (current.getEnemyId() != null && !current.getEnemyId().isEmpty() && !current.isConquered()) {
+            System.out.println("Na " + current.getName() + " vládne nepřítel. Nejprve ho poraz (příkaz hadanka).");
             return;
         }
         spongebob.setCurrentPlanet(planet1);

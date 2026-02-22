@@ -4,21 +4,22 @@ import Characters.Spongebob;
 import Command.*;
 import Command.CommandManager;
 import Planets.Planet;
-import Puzzles.PuzzleLoader;
 
 import java.util.Scanner;
 
 public class Hra {
     private Spongebob spongebob;
     private GameData world;
-    Scanner scanner=new Scanner(System.in);
-    CommandManager commandManager = new CommandManager();
-    boolean checkWin=false;
+    private Scanner scanner = new Scanner(System.in);
+    private CommandManager commandManager = new CommandManager();
+    private boolean checkWin = false;
+    private boolean running = true;
 
 
     public void inicialization(){
         world = GameData.loadGameDataFromResources("/gamedata.json");
         spongebob = new Spongebob(world, "terra_prime");
+
 
 
         commandManager.addCommand("jdi",new JdiCommand(spongebob));
@@ -28,8 +29,10 @@ public class Hra {
         commandManager.addCommand("pouzij",new PouzijCommand(spongebob));
         commandManager.addCommand("hadanka",new HadankaCommand(spongebob));
         commandManager.addCommand("inventar",new InventarCommand(spongebob));
-        commandManager.addCommand("konec",new KonecCommand());
-
+        commandManager.addCommand("konec", new KonecCommand(() -> running = false));
+    }
+    public void stop(){
+        running=false;
     }
 
     private void checkWinCondition() {
@@ -45,9 +48,9 @@ public class Hra {
         System.out.println("Spongebob, Ovládnutí galaxie");
         System.out.println("---------------");
         System.out.println("Jsi na: " + world.findPlanet(spongebob.getCurrentPlanet()).getName());
-        System.out.println("Prikazy: jdi, mluv, prozkoumej, vezmi, pouzij, hadanka, inventar");
+        System.out.println("Prikazy: jdi, mluv, prozkoumej, vezmi, pouzij, hadanka, inventar,konec");
         System.out.println();
-        while (true) {
+        while (running) {
             if (spongebob.getHealth() <= 0) {
                 System.out.println("Zemrel jsi. Konec hry.");
                 break;
@@ -65,8 +68,6 @@ public class Hra {
             }
             checkWinCondition();
         }
-
-
 
 
     }
