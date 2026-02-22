@@ -15,12 +15,22 @@ public class Planet {
     private ArrayList<Item> items=new ArrayList<>();
     private ArrayList<NPC> npcs=new ArrayList<>();
     private ArrayList<Puzzle> puzzles=new ArrayList<>();
+    private String enemyId;
 
     public Planet(String id, String name, String info) {
         this.id = id;
         this.name = name;
         this.info = info;
     }
+
+    public String getEnemyId() {
+        return enemyId;
+    }
+
+    public void setEnemyId(String enemyId) {
+        this.enemyId = enemyId;
+    }
+
 
     public String getName() {
         return name;

@@ -52,7 +52,8 @@
           "dialogue": "Správná kombinace může vypnout obranu."
         }
       ],
-      "neighbours": ["terra_prime", "brutalis"]
+      "neighbours": ["terra_prime", "brutalis"],
+      "enemyId": "lord_mechano"
     },
     {
       "id": "brutalis",
@@ -79,7 +80,8 @@
           "dialogue": "V aréně přežijí jen chytří bojovníci."
         }
       ],
-      "neighbours": ["mechaon", "mentara"]
+      "neighbours": ["mechaon", "mentara"],
+      "enemyId": "generál_kragg"
     },
     {
       "id": "mentara",
@@ -106,7 +108,8 @@
           "dialogue": "Odpovědi jsou skryté v symbolech."
         }
       ],
-      "neighbours": ["brutalis", "galactic_core"]
+      "neighbours": ["brutalis", "galactic_core"],
+      "enemyId": "mistr_myron"
     },
     {
       "id": "galactic_core",
@@ -132,7 +135,8 @@
           "name": "Starý kronikář",
           "dialogue": "Nox kdysi býval ochráncem světů."
         }],
-      "neighbours": ["mentara"]
+      "neighbours": ["mentara"],
+      "enemyId": "vládce_nox"
     }
   ],
   "enemies": [
