@@ -19,9 +19,7 @@ public class Inventory {
 
     public void odebratItem(Item item) {
         if (items.remove(item)) {
-            System.out.println("Použil jsi: " + item.getName());
-        }
-    }
+        }}
 
     public void inventar() {
         if (items.isEmpty()) {
