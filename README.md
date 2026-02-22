@@ -42,17 +42,25 @@ Hráč zadává příkazy do konzole.
 ### Dostupné příkazy:
 
 -jdi <planeta>
+
 -vezmi <item>
+
 -pouzij <item>
+
 -mluv
+
 -hadanka
+
 -prozkoumej
+
 -inventar
 
 ## Příklady:
 
 jdi mechaon
+
 vezmi medkit
+
 pouzij medkit
 
 
