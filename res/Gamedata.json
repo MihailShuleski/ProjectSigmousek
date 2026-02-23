@@ -178,25 +178,25 @@
     {
       "id": "lord_mechano",
       "name": "Lord Mechano",
-      "health": 80,
+      "hp": 80,
       "dialogue": "Stroje jsou dokonalé. Ty nemáš šanci."
     },
     {
       "id": "generál_kragg",
       "name": "Generál Kragg",
-      "health": 120,
+      "hp": 120,
       "dialogue": "Jen síla rozhoduje!"
     },
     {
       "id": "mistr_myron",
       "name": "Mistr Myron",
-      "health": 90,
+      "hp": 90,
       "dialogue": "Mysl je nejsilnější zbraň."
     },
     {
       "id": "vládce_nox",
       "name": "Vládce Nox",
-      "health": 150,
+      "hp": 150,
       "dialogue": "Spojuji vše. Sílu, techniku i mysl."
     }
   ]
