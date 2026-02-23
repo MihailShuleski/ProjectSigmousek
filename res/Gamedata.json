@@ -49,16 +49,16 @@
       "neighbours": ["terra_prime", "brutalis"],
       "enemyId": "lord_mechano",
       "puzzles": [
-        { "question": "Co musíš rozbít, než to můžeš použít?", "answer": "vejce", "damage": 15 },
-        { "question": "Co má krk, ale nemá hlavu?", "answer": "lahev", "damage": 18 },
-        { "question": "Co běží, ale nikdy nechodí?", "answer": "reka", "damage": 17 },
-        { "question": "Čím víc z toho bereš, tím větší to je. Co je to?", "answer": "dira", "damage": 22 },
-        { "question": "Co má ruce, ale nemůže tleskat?", "answer": "hodiny", "damage": 20 },
-        { "question": "Co patří nahoru a dolů, ale nikdy se nepohybuje?", "answer": "schody", "damage": 19 },
-        { "question": "Co má města, ale nemá domy, řeky bez vody a lesy bez stromů?", "answer": "mapa", "damage": 25 },
-        { "question": "Co má klíče, ale neotevře žádné dveře?", "answer": "klavir", "damage": 21 },
-        { "question": "Co má oko, ale nevidí?", "answer": "jehla", "damage": 16 },
-        { "question": "Co je vždy před tebou, ale nikdy to nemůžeš dohonit?", "answer": "budoucnost", "damage": 30 }
+        { "id":"1","question": "Co musíš rozbít, než to můžeš použít?", "answer": "vejce", "damage": 15 },
+        { "id":"2","question": "Co má krk, ale nemá hlavu?", "answer": "lahev", "damage": 18 },
+        { "id":"3","question": "Co běží, ale nikdy nechodí?", "answer": "reka", "damage": 17 },
+        { "id":"4","question": "Čím víc z toho bereš, tím větší to je. Co je to?", "answer": "dira", "damage": 22 },
+        { "id":"5","question": "Co má ruce, ale nemůže tleskat?", "answer": "hodiny", "damage": 20 },
+        { "id":"6","question": "Co patří nahoru a dolů, ale nikdy se nepohybuje?", "answer": "schody", "damage": 19 },
+        { "id":"7","question": "Co má města, ale nemá domy, řeky bez vody a lesy bez stromů?", "answer": "mapa", "damage": 25 },
+        { "id":"8","question": "Co má klíče, ale neotevře žádné dveře?", "answer": "klavir", "damage": 21 },
+        { "id":"9","question": "Co má oko, ale nevidí?", "answer": "jehla", "damage": 16 },
+        { "id":"10","question": "Co je vždy před tebou, ale nikdy to nemůžeš dohonit?", "answer": "budoucnost", "damage": 30 }
       ]
     },
     {
@@ -89,16 +89,16 @@
       "neighbours": ["mechaon", "mentara"],
       "enemyId": "generál_kragg",
       "puzzles": [
-        { "question": "Nepřítel má velmi silný pancíř, ale je náchylný k elektrickým útokům. Jaký prvek použiješ?", "answer": "elektrina", "damage": 24 },
-        { "question": "Nepřítel se léčí, pokud má čas ustoupit. Jaký styl boje tomu zabrání?", "answer": "tlak", "damage": 23 },
-        { "question": "Létající nepřítel je nejzranitelnější při vzletu. Kdy zaútočíš?", "answer": "vzlet", "damage": 26 },
-        { "question": "Boss má slabou obranu zezadu, ale silnou zepředu. Odkud zaútočíš?", "answer": "zezadu", "damage": 20 },
-        { "question": "Nepřítel používá silné útoky s dlouhou přípravou. Co je nejlepší reakce?", "answer": "uhel", "damage": 25 },
-        { "question": "Nepřítel je imunní vůči jedu, ale slabý proti ohni. Jaký útok zvolíš?", "answer": "ohen", "damage": 18 },
-        { "question": "Skupina slabších nepřátel útočí najednou. Jaký typ útoku je nejefektivnější?", "answer": "plosny", "damage": 27 },
-        { "question": "Boss se stává silnějším, čím déle boj trvá. Jaká strategie je správná?", "answer": "rychlost", "damage": 30 },
-        { "question": "Nepřítel má silnou magickou obranu, ale slabou fyzickou. Jaký útok použiješ?", "answer": "fyzicky", "damage": 21 },
-        { "question": "Nepřítel ztrácí rovnováhu po skoku. Kdy udeříš?", "answer": "dopad", "damage": 23 }
+        { "id":"1","question": "Nepřítel má velmi silný pancíř, ale je náchylný k elektrickým útokům. Jaký prvek použiješ?", "answer": "elektrina", "damage": 24 },
+        { "id":"2","question": "Nepřítel se léčí, pokud má čas ustoupit. Jaký styl boje tomu zabrání?", "answer": "tlak", "damage": 23 },
+        { "id":"3","question": "Létající nepřítel je nejzranitelnější při vzletu. Kdy zaútočíš?", "answer": "vzlet", "damage": 26 },
+        { "id":"4","question": "Boss má slabou obranu zezadu, ale silnou zepředu. Odkud zaútočíš?", "answer": "zezadu", "damage": 20 },
+        { "id":"5","question": "Nepřítel používá silné útoky s dlouhou přípravou. Co je nejlepší reakce?", "answer": "uhel", "damage": 25 },
+        { "id":"6","question": "Nepřítel je imunní vůči jedu, ale slabý proti ohni. Jaký útok zvolíš?", "answer": "ohen", "damage": 18 },
+        { "id":"7","question": "Skupina slabších nepřátel útočí najednou. Jaký typ útoku je nejefektivnější?", "answer": "plosny", "damage": 27 },
+        { "id":"8","question": "Boss se stává silnějším, čím déle boj trvá. Jaká strategie je správná?", "answer": "rychlost", "damage": 30 },
+        { "id":"9","question": "Nepřítel má silnou magickou obranu, ale slabou fyzickou. Jaký útok použiješ?", "answer": "fyzicky", "damage": 21 },
+        { "id":"10","question": "Nepřítel ztrácí rovnováhu po skoku. Kdy udeříš?", "answer": "dopad", "damage": 23 }
       ]
     },
     {
@@ -122,16 +122,16 @@
       "neighbours": ["brutalis", "galactic_core"],
       "enemyId": "mistr_myron",
       "puzzles": [
-        { "question": "Kdo objevil Ameriku v roce 1492?", "answer": "Kolumbus", "damage": 20 },
-        { "question": "Která civilizace stavěla pyramidy v Egyptě?", "answer": "Egypťané", "damage": 25 },
-        { "question": "Kdy začala první světová válka?", "answer": "1914", "damage": 22 },
-        { "question": "Kdo vynalezl knihtisk?", "answer": "Gutenberg", "damage": 24 },
-        { "question": "Jak se jmenuje největší oceán na Zemi?", "answer": "Pacifik", "damage": 23 },
-        { "question": "Který stát měl Napoleon Bonaparte jako vůdce?", "answer": "Francie", "damage": 26 },
-        { "question": "Jaký plyn dýcháme nejvíce?", "answer": "Kyslik", "damage": 19 },
-        { "question": "Kdo napsal „O původu druhů“?", "answer": "Darwin", "damage": 28 },
-        { "question": "Jaký kontinent je nazýván „kolebkou lidstva“?", "answer": "Afrika", "damage": 27 },
-        { "question": "Kdy skončila druhá světová válka?", "answer": "1945", "damage": 30 }
+        { "id":"1","question": "Kdo objevil Ameriku v roce 1492?", "answer": "Kolumbus", "damage": 20 },
+        { "id": "2","question": "Která civilizace stavěla pyramidy v Egyptě?", "answer": "Egypťané", "damage": 25 },
+        { "id":"3","question": "Kdy začala první světová válka?", "answer": "1914", "damage": 22 },
+        { "id":"4","question": "Kdo vynalezl knihtisk?", "answer": "Gutenberg", "damage": 24 },
+        { "id":"5","question": "Jak se jmenuje největší oceán na Zemi?", "answer": "Pacifik", "damage": 23 },
+        { "id":"6","question": "Který stát měl Napoleon Bonaparte jako vůdce?", "answer": "Francie", "damage": 26 },
+        { "id":"7","question": "Jaký plyn dýcháme nejvíce?", "answer": "Kyslik", "damage": 19 },
+        { "id":"8","question": "Kdo napsal „O původu druhů“?", "answer": "Darwin", "damage": 28 },
+        { "id":"9","question": "Jaký kontinent je nazýván „kolebkou lidstva“?", "answer": "Afrika", "damage": 27 },
+        { "id":"10","question": "Kdy skončila druhá světová válka?", "answer": "1945", "damage": 30 }
       ]
     },
     {
@@ -161,16 +161,16 @@
       "neighbours": ["mentara"],
       "enemyId": "vládce_nox",
       "puzzles": [
-        { "question": "Nepřítel má silnou obranu, ale slabé útoky. Jaká strategie je nejlepší?", "answer": "obrana", "damage": 24 },
-        { "question": "Boss ztrácí sílu při opakovaném blokování. Co uděláš?", "answer": "blok", "damage": 26 },
-        { "question": "Nepřítel se regeneruje po každém zásahu. Jak zabráníš hojení?", "answer": "tlak", "damage": 28 },
-        { "question": "Řada čísel: 5, 10, 20, 40, ?", "answer": "80", "damage": 22 },
-        { "question": "Nepřítel útočí vždy po dvou kolech. Kdy zaútočíš?", "answer": "treti", "damage": 25 },
-        { "question": "Boss má slabinu na led, ale je odolný proti ohni. Jaký útok použiješ?", "answer": "led", "damage": 27 },
-        { "question": "Nepřítel je pomalý, ale způsobuje velké poškození. Jaký styl boje zvolíš?", "answer": "rychly", "damage": 26 },
-        { "question": "Sekvence čísel pro odemčení dveří: 3, 6, 12, 24, ?", "answer": "48", "damage": 24 },
-        { "question": "Kdo objevil Ameriku v roce 1492?", "answer": "Kolumbus", "damage": 29 },
-        { "question": "Který egyptský faraon nechal postavit Velkou pyramidu v Gíze?", "answer": "Chufu", "damage": 30 }
+        { "id":"1","question": "Nepřítel má silnou obranu, ale slabé útoky. Jaká strategie je nejlepší?", "answer": "obrana", "damage": 24 },
+        { "id":"2","question": "Boss ztrácí sílu při opakovaném blokování. Co uděláš?", "answer": "blok", "damage": 26 },
+        { "id":"3","question": "Nepřítel se regeneruje po každém zásahu. Jak zabráníš hojení?", "answer": "tlak", "damage": 28 },
+        { "id":"4","question": "Řada čísel: 5, 10, 20, 40, ?", "answer": "80", "damage": 22 },
+        { "id":"5","question": "Nepřítel útočí vždy po dvou kolech. Kdy zaútočíš?", "answer": "treti", "damage": 25 },
+        { "id":"6","question": "Boss má slabinu na led, ale je odolný proti ohni. Jaký útok použiješ?", "answer": "led", "damage": 27 },
+        { "id":"7","question": "Nepřítel je pomalý, ale způsobuje velké poškození. Jaký styl boje zvolíš?", "answer": "rychly", "damage": 26 },
+        { "id":"8","question": "Sekvence čísel pro odemčení dveří: 3, 6, 12, 24, ?", "answer": "48", "damage": 24 },
+        { "id":"9","question": "Kdo objevil Ameriku v roce 1492?", "answer": "Kolumbus", "damage": 29 },
+        { "id": "10","question": "Který egyptský faraon nechal postavit Velkou pyramidu v Gíze?", "answer": "Chufu", "damage": 30 }
       ]
     }
   ],

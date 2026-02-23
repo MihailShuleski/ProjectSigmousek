@@ -6,11 +6,13 @@ import Planets.Planet;
 import java.util.Scanner;
 
 public class Puzzle {
+    private String id;
     private String question;
     private String correctAnswer;
     private int damage; //kazda hadanka bude delat jiny pocet damage ig
 
-    public Puzzle(String question, String correctAnswer, int damage) {
+    public Puzzle(String id,String question, String correctAnswer, int damage) {
+        this.id=id;
         this.question = question;
         this.correctAnswer = correctAnswer;
         this.damage = damage;

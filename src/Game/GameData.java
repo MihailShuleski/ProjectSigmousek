@@ -4,6 +4,7 @@ import Characters.NPC.NPC;
 import Characters.Nepritele.Enemy;
 import Items.Item;
 import Planets.Planet;
+import Puzzles.Puzzle;
 import com.google.gson.Gson;
 
 import java.io.InputStream;
@@ -16,6 +17,7 @@ public class GameData {
     public ArrayList<Enemy> enemies;
     public ArrayList<Planet> planets;
     public ArrayList<NPC> npcs;
+    public ArrayList<Puzzle> puzzles;
 
 
     public static GameData loadGameDataFromResources(String resourcePath){
@@ -52,5 +54,12 @@ public class GameData {
             if (e.getId().equalsIgnoreCase(id)) return e;
         }
         return null;
+    }
+    public Puzzle findPuzzle(String id){
+        if (puzzles == null) return null;
+        for (Puzzle puzzle:puzzles){
+            if (puzzle.getQuestion().equalsIgnoreCase(id))return puzzle;
+        }
+        throw new IllegalArgumentException("Neexistuje takova hadanka s id : "+id);
     }
 }
