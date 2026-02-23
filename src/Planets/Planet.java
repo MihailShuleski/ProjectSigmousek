@@ -1,6 +1,7 @@
 package Planets;
 
 import Characters.NPC.NPC;
+import Characters.Spongebob;
 import Items.Item;
 import Puzzles.Puzzle;
 

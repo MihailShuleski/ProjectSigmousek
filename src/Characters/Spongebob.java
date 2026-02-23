@@ -10,6 +10,15 @@ public class Spongebob {
     Inventory inventory=new Inventory();
     private String currentPlanet;
     private boolean CheckWin=false;
+    private int index=10;
+
+    public int getIndex() {
+        return index;
+    }
+
+    public void setIndex(int index) {
+        this.index = index;
+    }
 
     public Spongebob(GameData data, String startPlanet) {
         this.data =data;

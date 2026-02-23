@@ -8,20 +8,20 @@ import java.util.Scanner;
 public class Puzzle {
     private String id;
     private String question;
-    private String correctAnswer;
+    private String answer;
     private int damage; //kazda hadanka bude delat jiny pocet damage ig
 
-    public Puzzle(String id,String question, String correctAnswer, int damage) {
+    public Puzzle(String id,String question, String answer, int damage) {
         this.id=id;
         this.question = question;
-        this.correctAnswer = correctAnswer;
+        this.answer = answer;
         this.damage = damage;
     }
     public int getDamage() {
         return damage;
     }
-    public String getCorrectAnswer(){
-        return correctAnswer;
+    public String getAnswer(){
+        return answer;
     }
     public String getQuestion(){
         return question;
@@ -33,7 +33,7 @@ public class Puzzle {
         System.out.print("Odpověď: ");
         String input = sc.nextLine();
 
-        if (input != null && correctAnswer != null && input.trim().equalsIgnoreCase(correctAnswer.trim())) {
+        if (input != null && answer != null && input.trim().equalsIgnoreCase(answer.trim())) {
             System.out.println("Správně!");
             p.getPuzzles().remove(puzzle);
             p.setConquered(true);

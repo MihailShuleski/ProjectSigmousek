@@ -30,12 +30,21 @@ public class HadankaCommand implements Command{
                 enemy.vypisDialog();
                 System.out.println();
             }
+            if (enemy.getHp()<=0){
+                System.out.println("Ovládl jsi planetu!!");
+                p.setConquered(true);
+                spongebob.setIndex(10);
+            }
         }
+
 
         Random rd = new Random();
 
-        Puzzle puzzle = p.getPuzzles().get(rd.nextInt(0, 10));
+
+        Puzzle puzzle = p.getPuzzles().get(rd.nextInt(spongebob.getIndex()));
         puzzle.start(puzzle,p,spongebob);
+        spongebob.setIndex(spongebob.getIndex()-1);
+
 
     }
 
