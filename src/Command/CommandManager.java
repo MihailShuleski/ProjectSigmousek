@@ -20,5 +20,4 @@ public class CommandManager {
             commands.get(commandName).execute(parts);
         }
     }
-
 }
