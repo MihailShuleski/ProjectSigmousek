@@ -417,13 +417,13 @@
     {
       "id": "mistr_myron",
       "name": "Mistr Myron",
-      "hp": 90,
+      "hp": 180,
       "dialogue": "Mysl je nejsilnější zbraň."
     },
     {
       "id": "vládce_nox",
       "name": "Vládce Nox",
-      "hp": 150,
+      "hp": 300,
       "dialogue": "Spojuji vše. Sílu, techniku i mysl."
     }
   ]
