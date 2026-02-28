@@ -309,39 +309,6 @@
       ]
     },
     {
-      "id": "mentara",
-      "name": "Mentara",
-      "description": "Planeta chrámů a knihoven.",
-      "conquered": false,
-      "items": [],
-      "npcs": [
-        {
-          "id": "strážce_chrámu",
-          "name": "Strážce chrámu",
-          "dialogue": "Trpělivost je klíčem k poznání."
-        },
-        {
-          "id": "knihovník_moudrosti",
-          "name": "Knihovník moudrosti",
-          "dialogue": "Odpovědi jsou skryté v symbolech."
-        }
-      ],
-      "neighbours": ["brutalis", "galactic_core"],
-      "enemyId": "mistr_myron",
-      "puzzles": [
-        { "id":"1","question": "Kdo objevil Ameriku v roce 1492?", "answer": "Kolumbus", "damage": 20 },
-        { "id": "2","question": "Která civilizace stavěla pyramidy v Egyptě?", "answer": "Egypťané", "damage": 25 },
-        { "id":"3","question": "Kdy začala první světová válka?", "answer": "1914", "damage": 22 },
-        { "id":"4","question": "Kdo vynalezl knihtisk?", "answer": "Gutenberg", "damage": 24 },
-        { "id":"5","question": "Jak se jmenuje největší oceán na Zemi?", "answer": "Pacifik", "damage": 23 },
-        { "id":"6","question": "Který stát měl Napoleon Bonaparte jako vůdce?", "answer": "Francie", "damage": 26 },
-        { "id":"7","question": "Jaký plyn dýcháme nejvíce?", "answer": "Kyslik", "damage": 19 },
-        { "id":"8","question": "Kdo napsal „O původu druhů“?", "answer": "Darwin", "damage": 28 },
-        { "id":"9","question": "Jaký kontinent je nazýván „kolebkou lidstva“?", "answer": "Afrika", "damage": 27 },
-        { "id":"10","question": "Kdy skončila druhá světová válka?", "answer": "1945", "damage": 30 }
-      ]
-    },
-    {
       "id": "galactic_core",
       "name": "Galactic Core",
       "description": "Centrum galaxie. Temná a nebezpečná planeta.",

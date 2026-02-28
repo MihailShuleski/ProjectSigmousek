@@ -8,6 +8,6 @@ public class Medkit implements ItemBehaviour{
     @Override
     public void pouzij(Item item, Spongebob spongebob) {
         spongebob.heal(30);
-        System.out.println("Použil jsi: "+item.getName());
+        System.out.println("Použil jsi: "+item.getName()+", +30 HP!!!");
     }
 }
