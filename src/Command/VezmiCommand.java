@@ -37,6 +37,14 @@ public class VezmiCommand implements Command{
             return;
         }
 
+
+        if (foundItem.getId().equals("datový_klíč_galaxie")) {
+            if (spongebob.getInventory().findItem("holographic_scanner") == null) {
+                System.out.println("Tento item tu není (možná je neviditelný, potřebuješ skener).");
+                return;
+            }
+        }
+
         current.getItems().remove(foundItem);
         spongebob.getInventory().pridatItem(foundItem);
 

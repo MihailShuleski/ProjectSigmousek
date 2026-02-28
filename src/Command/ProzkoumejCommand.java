@@ -28,7 +28,13 @@ public class ProzkoumejCommand implements Command{
         if (planet.getItems().size()!=0) {
             System.out.println("Itemy:");
             for (Item item : planet.getItems()) {
-                System.out.println("- " + item.getName());
+                if (item.getId().equals("datový_klíč_galaxie")) {
+                    if (spongebob.getInventory().findItem("holographic_scanner") != null) {
+                        System.out.println("- " + item.getName());
+                    }
+                } else {
+                    System.out.println("- " + item.getName());
+                }
             }
         }
 
