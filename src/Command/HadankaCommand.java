@@ -43,7 +43,7 @@ public class HadankaCommand implements Command{
             if (enemy != null && enemy.getHp() <= 0 && !p.isConquered()) {
                 System.out.println("Porazil jsi nepřítele a ovládl jsi planetu!!");
                 p.setConquered(true);
-                spongebob.setIndex(10);
+                spongebob.setIndex(10); 
             }
         }
     }
