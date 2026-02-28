@@ -13,7 +13,9 @@ public class Enemy {
         this.dialogue = dialogue;
     }
 
-
+    public void setHp(int hp) {
+        this.hp = hp;
+    }
 
     public String getId() {
         return id;

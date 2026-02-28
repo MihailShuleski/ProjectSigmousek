@@ -1,5 +1,6 @@
 package Puzzles;
 
+import Characters.Nepritele.Enemy;
 import Characters.Spongebob;
 import Planets.Planet;
 
@@ -36,7 +37,25 @@ public class Puzzle {
         if (input != null && answer != null && input.trim().equalsIgnoreCase(answer.trim())) {
             System.out.println("Správně!");
             p.getPuzzles().remove(puzzle);
-            p.setConquered(true);
+
+            int finalDamage = puzzle.getDamage();
+            if (spongebob.getInventory().findItem("energy_crystal") != null) {
+                System.out.println("Máš Energy Crystal! Poškození je dvojnásobné!");
+                finalDamage *= 2;
+            }
+
+            if (p.getEnemyId() != null && !p.getEnemyId().isEmpty()) {
+                Enemy enemy = spongebob.getData().findEnemy(p.getEnemyId());
+                if (enemy != null) {
+                    enemy.setHp(enemy.getHp() - finalDamage);
+                    System.out.println("Udělal jsi nepříteli " + finalDamage + " poškození! Nepříteli zbývá "
+                            + enemy.getHp() + " HP.");
+                } else {
+                    p.setConquered(true);
+                }
+            } else {
+                p.setConquered(true);
+            }
         } else {
             System.out.println("Špatně!");
             spongebob.damage(puzzle.getDamage());
