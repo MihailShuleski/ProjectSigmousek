@@ -66,21 +66,11 @@ public class Planet {
         this.id = id;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setInfo(String info) {
-        this.info = info;
-    }
 
     public void setConquered(boolean conquered) {
         this.conquered = conquered;
     }
 
-    public void setNeighbours(ArrayList<String> neighbours) {
-        this.neighbours = neighbours;
-    }
 
     public void setItems(ArrayList<Item> items) {
         this.items = items;
