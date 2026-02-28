@@ -55,16 +55,25 @@ public class Hra {
                 System.out.println("Zemrel jsi. Konec hry.");
                 break;
             }
-            if (((checkWin = true) && (spongebob.isCheckWin())) == true){
+            if (checkWin && spongebob.isCheckWin()) {
                 System.out.println("Vyhral jsi! Ovládl jsi galaxii!");
                 break;
             }
             Planet p = world.findPlanet(spongebob.getCurrentPlanet());
             System.out.print("HP: " + spongebob.getHealth() + " | " + p.getName() + " > ");
-            String input = scanner.nextLine();
-            if (input != null) input = input.trim();
-            if (input != null && !input.isEmpty()) {
-                commandManager.processCommand(input);
+
+            try {
+                String input = scanner.nextLine();
+                if (input != null)
+                    input = input.trim();
+                if (input != null && !input.isEmpty()) {
+                    commandManager.processCommand(input);
+                } else {
+                    System.out.println("Zadal jsi prázdný příkaz. Zkus to znovu.");
+                }
+            } catch (Exception e) {
+                System.out.println("Došlo k chybě při čtení vstupu. Ukončuji hru.");
+                break;
             }
             checkWinCondition();
         }
