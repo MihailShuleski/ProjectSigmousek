@@ -26,6 +26,12 @@ public class HadankaCommand implements Command{
         if (p.getEnemyId() != null && !p.getEnemyId().isEmpty()) {
             Enemy enemy = spongebob.getData().findEnemy(p.getEnemyId());
             if (enemy != null) {
+                if (enemy.getHp() <= 0) {
+                    System.out.println("Nepřítel na této planetě (" + enemy.getName() + ") je již poražen!");
+                    System.out.println("Planeta je už ovládnuta a není třeba odpovídat na další hádanky.");
+                    return;
+                }
+
                 System.out.println("Před tebou stojí " + enemy.getName() + " (" + enemy.getHp() + " HP).");
                 enemy.vypisDialog();
                 System.out.println();
