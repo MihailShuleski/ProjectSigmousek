@@ -58,16 +58,14 @@ public class HadankaCommand implements Command{
 
         Random rd = new Random();
 
-        Puzzle puzzle = p.getPuzzles().get(rd.nextInt(spongebob.getIndex()));
+        Puzzle puzzle = p.getPuzzles().get(rd.nextInt(p.getPuzzles().size()));
         puzzle.start(puzzle,p,spongebob);
-        spongebob.setIndex(spongebob.getIndex()-1);
 
         if (p.getEnemyId() != null && !p.getEnemyId().isEmpty()) {
             Enemy enemy = spongebob.getData().findEnemy(p.getEnemyId());
             if (enemy != null && enemy.getHp() <= 0 && !p.isConquered()) {
                 System.out.println("Porazil jsi nepřítele a ovládl jsi planetu!!");
                 p.setConquered(true);
-                spongebob.setIndex(10);
             }
         }
     }

@@ -1,5 +1,11 @@
 package Characters.Nepritele;
 
+/**
+ * Třída reprezentující nepřítele na určitých planetách.
+ * Nepřítel má své životy (HP) a dialogy.
+ *
+ * @author Shuleski Mihail
+ */
 public class Enemy {
     private String id;
     private String name;
@@ -37,7 +43,6 @@ public class Enemy {
         System.out.println(getDialogue());
     }
 
-    public void udelatDamage(){};
 
 
 }

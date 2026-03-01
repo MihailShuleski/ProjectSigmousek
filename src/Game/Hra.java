@@ -16,7 +16,7 @@ import java.util.Scanner;
 public class Hra {
     private Spongebob spongebob;
     private GameData world;
-    private Scanner scanner = new Scanner(System.in);
+    public static Scanner scanner = new Scanner(System.in);
     private CommandManager commandManager = new CommandManager();
     private boolean checkWin = false;
     private boolean running = true;

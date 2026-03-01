@@ -46,7 +46,7 @@ public class Puzzle {
     public void start(Puzzle puzzle, Planet p, Spongebob spongebob){
         System.out.println("Hádanka: ");
         System.out.println(question);
-        Scanner sc = new Scanner(System.in);
+        Scanner sc = Game.Hra.scanner;
         System.out.print("Odpověď: ");
         String input = sc.nextLine();
 

@@ -4,21 +4,18 @@ import Game.GameData;
 import Inventory.Inventory;
 import Planets.Planet;
 
+/**
+ * Třída reprezentující hlavní postavu hráče (Spongebob).
+ * Udržuje zdraví, inventář a lokaci hráče.
+ *
+ * @author Shuleski Mihail
+ */
 public class Spongebob {
     private GameData data;
     private int health=100;
     Inventory inventory=new Inventory();
     private String currentPlanet;
     private boolean CheckWin=false;
-    private int index=10;
-
-    public int getIndex() {
-        return index;
-    }
-
-    public void setIndex(int index) {
-        this.index = index;
-    }
 
     public Spongebob(GameData data, String startPlanet) {
         this.data =data;
@@ -55,7 +52,6 @@ public class Spongebob {
         System.out.println("Ztratil jsi: "+dmg+"HP ,zbývají ti: "+health);
         if(health<= 0){
             System.out.println("Zemřel jsi. Konec hry :(");
-            System.exit(100);
         }
     }
     public void moveTo(String planet){
