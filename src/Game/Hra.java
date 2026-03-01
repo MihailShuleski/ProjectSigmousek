@@ -7,6 +7,12 @@ import Planets.Planet;
 
 import java.util.Scanner;
 
+/**
+ * Třída implementující hlavní herní smyčku, zpracovává vstupy a řídí průběh
+ * hry.
+ *
+ * @author Shuleski Mihail
+ */
 public class Hra {
     private Spongebob spongebob;
     private GameData world;
@@ -15,13 +21,13 @@ public class Hra {
     private boolean checkWin = false;
     private boolean running = true;
 
-
+    /**
+     * Inicializuje herní data a vytváří instanci hráče.
+     * Načítá GameData z JSON konfigurace, a nastaví příkazy do CommandManageru.
+     */
     public void inicialization(){
         world = GameData.loadGameDataFromResources("/gamedata.json");
         spongebob = new Spongebob(world, "terra_prime");
-
-
-
         commandManager.addCommand("jdi",new JdiCommand(spongebob));
         commandManager.addCommand("mluv",new MluvCommand(spongebob));
         commandManager.addCommand("prozkoumej",new ProzkoumejCommand(spongebob));
@@ -31,10 +37,11 @@ public class Hra {
         commandManager.addCommand("inventar",new InventarCommand(spongebob));
         commandManager.addCommand("konec", new KonecCommand(() -> running = false));
     }
-    public void stop(){
-        running=false;
-    }
 
+    /**
+     * Prověřuje, zda se podařilo shromáždit podmínky k výhře hry (získání klíče a
+     * obsazení Galactic Core).
+     */
     private void checkWinCondition() {
         Planet core = world.findPlanet("galactic_core");
         if (core != null && core.isConquered()) {
@@ -42,6 +49,10 @@ public class Hra {
         }
     }
 
+    /**
+     * Zapíná hlavní herní smyčku, ve které vypisuje stav hry a akceptuje
+     * uživatelské příkazy.
+     */
     public void start(){
         inicialization();
         System.out.println();

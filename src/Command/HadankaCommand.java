@@ -9,11 +9,29 @@ import Puzzles.Puzzle;
 import java.util.Random;
 import java.util.Scanner;
 
+/**
+ * Příkaz pro spuštění hádanky s nepřítelem na dané planetě.
+ * Pokud je hádanka zodpovězena správně, udělí nepříteli zranění.
+ *
+ * @author Shuleski Mihail
+ */
 public class HadankaCommand implements Command{
     Spongebob spongebob;
+
+    /**
+     * Konstruktor pro příkaz hádanky.
+     *
+     * @param spongebob Odkaz na hlavního hrdinu
+     */
     public HadankaCommand(Spongebob spongebob){
         this.spongebob=spongebob;
     }
+
+    /**
+     * Spustí proces hádání. Vybere náhodnou hádanku a vyhodnotí útok.
+     *
+     * @param parts Zadaný příkaz
+     */
     @Override
     public void execute(String[] parts) {
 
@@ -54,7 +72,11 @@ public class HadankaCommand implements Command{
         }
     }
 
-
+    /**
+     * Určuje, zda tento příkaz ukončuje hru.
+     *
+     * @return false
+     */
     @Override
     public boolean exit() {
         return false;

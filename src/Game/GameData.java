@@ -12,6 +12,12 @@ import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 
+/**
+ * Třída zodpovědná za držení načtených herních dat.
+ * Obsahuje metody pro vyhledávání entit jako jsou planety, nepřátelé a další.
+ *
+ * @author Pani učitelka Meitnerova
+ */
 public class GameData {
     public ArrayList<Item> items;
     public ArrayList<Enemy> enemies;
@@ -19,7 +25,12 @@ public class GameData {
     public ArrayList<NPC> npcs;
     public ArrayList<Puzzle> puzzles;
 
-
+    /**
+     * Načte data hry (lokace, předměty, atd.) ze souboru z resources.
+     *
+     * @param resourcePath Cesta k JSON souboru v resources
+     * @return Zkonstruovanou instanci GameData obsahující všechny herní informace
+     */
     public static GameData loadGameDataFromResources(String resourcePath){
         Gson gson= new Gson();
 
@@ -35,7 +46,15 @@ public class GameData {
             throw new RuntimeException("Chyba při načítání JSON"+e.getMessage());
         }
     }
-    //finds a planet by its text ID
+
+    /**
+     * Vyhledá planetu v uložených datech podle jejího unikátního identifikátoru
+     * (textového id).
+     *
+     * @param id Identifikátor planety
+     * @return Nalezená planeta
+     * @throws IllegalArgumentException Pokud planeta neexistuje
+     */
     public Planet findPlanet(String id){
         for (Planet p : planets) {
             if (p.getId().equals(id)) return p;

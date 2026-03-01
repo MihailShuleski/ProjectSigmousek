@@ -2,7 +2,20 @@ package Items;
 
 import Characters.Spongebob;
 
+/**
+ * Předmět Royal Badge slouží jako hráčem vyžádaný textový průvodce s
+ * instrukcemi, informující hráče o píkrazech a úkolech.
+ *
+ * @author Shuleski Mihail
+ */
 public class RoyalBadge implements ItemBehaviour{
+
+    /**
+     * Vytiskne instrukce do konzole po použití odznaku.
+     *
+     * @param item      Objednaný předmět (Královský odznak)
+     * @param spongebob Cílový hráč
+     */
     @Override
     public void pouzij(Item item, Spongebob spongebob) {
         System.out.println("Královský odznak září a v hlavě se ti ozve hlas rádce:");

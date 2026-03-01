@@ -1,5 +1,12 @@
 package Characters.NPC;
 
+/**
+ * Třída reprezentující nehráčskou postavu (NPC) ve hře.
+ * Uchovává informace jako je ID, jméno a dialog.
+ *
+ * @author Shuleski Mihail
+ */
+
 public class NPC {
     private String id;
     private String name;

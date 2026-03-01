@@ -6,14 +6,40 @@ import Characters.Spongebob;
 import Items.Item;
 import Planets.Planet;
 
+/**
+ * Příkaz pro vypsání informací o aktuální planetě hráče.
+ * Vypíše název planety, sousední planety, předměty na planetě a NPC (včetně
+ * nepřítele).
+ *
+ * @author Shuleski Mihail
+ */
 public class ProzkoumejCommand implements Command{
     Spongebob spongebob;
+
+    /**
+     * Konstruktor pro příkaz prozkoumej.
+     *
+     * @param spongebob Cílový hráč
+     */
     public ProzkoumejCommand(Spongebob spongebob){
         this.spongebob=spongebob;
     }
+
+    /**
+     * Převede formátovaný vstup z konzole na interní ID.
+     *
+     * @param input Vstupní řetězec
+     * @return Upravený vstupní řetězec bez mezer a malými písmeny
+     */
     private String normalizeInput(String input){
         return input.trim().toLowerCase().replace(" ","_");
     }
+
+    /**
+     * Zpracuje příkaz "prozkoumej" a vypíše detailní informace o stávající planetě.
+     *
+     *
+     */
     @Override
     public void execute(String[] parts) {
         Planet planet = spongebob.getData().findPlanet(spongebob.getCurrentPlanet());
@@ -50,7 +76,11 @@ public class ProzkoumejCommand implements Command{
         }
     }
 
-
+    /**
+     * Určuje, zda tento příkaz ukončuje hru.
+     *
+     * @return false
+     */
     @Override
     public boolean exit() {
         return false;

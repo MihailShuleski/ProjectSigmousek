@@ -6,6 +6,12 @@ import Planets.Planet;
 
 import java.util.Scanner;
 
+/**
+ * Třída reprezentující hádanku na planetách, se schopností zranit nepřítele
+ * nebo hráče.
+ *
+ * @author Shuleski Mihail
+ */
 public class Puzzle {
     private String id;
     private String question;
@@ -27,6 +33,16 @@ public class Puzzle {
     public String getQuestion(){
         return question;
     }
+
+    /**
+     * Zpracovává logiku odpovědi hráče a vyhodnocení udělení poškození / odebrání
+     * hp.
+     * Aplikuje násobič z Energy Crystal v případě výhry nad nepřítelem.
+     *
+     * @param puzzle    Konkrétní řešená hádanka
+     * @param p         Aktuální planeta hráče
+     * @param spongebob Odkaz na hrdinu kvůli stavu HP a inventáře
+     */
     public void start(Puzzle puzzle, Planet p, Spongebob spongebob){
         System.out.println("Hádanka: ");
         System.out.println(question);

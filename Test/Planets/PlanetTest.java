@@ -1,22 +1,31 @@
 package Planets;
 
+import Items.Item;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class PlanetTest {
 
-    @org.junit.jupiter.api.Test
-    void getEnemyId() {
+    Planet planet;
+
+    @BeforeEach
+    void setUp() {
+        planet = new Planet("terra_prime", "Terra Prime", "Start");
     }
 
-    @org.junit.jupiter.api.Test
-    void setEnemyId() {
+    @Test
+    void removeItem() {
+        planet.getItems().add(new Item("klic"));
+        Item removed = planet.removeItem("klic");
+        assertNotNull(removed, "Removed item should not be null.");
+        assertNull(planet.findItem("klic"), "Planet should no longer contain the removed item.");
     }
 
-    @org.junit.jupiter.api.Test
-    void getName() {
-    }
-
-    @org.junit.jupiter.api.Test
-    void isConquered() {
+    @Test
+    void setConquered() {
+        assertFalse(planet.isConquered(), "Planet should not be conquered initially.");
+        planet.setConquered(true);
+        assertTrue(planet.isConquered(), "Planet should be conquered after setConquered(true).");
     }
 }

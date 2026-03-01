@@ -5,15 +5,41 @@ import Characters.Nepritele.Enemy;
 import Characters.Spongebob;
 import Planets.Planet;
 
+/**
+ * Třída implementující příkaz pro rozhovor s NPC či nepřítelem na aktuální
+ * planetě.
+ *
+ * @author Shuleski Mihail
+ */
 public class MluvCommand implements Command{
     Spongebob spongebob;
+
+    /**
+     * Konstruktor příkazu mluv.
+     *
+     * @param spongebob Hráčova postava (využívané pro hledání dat)
+     */
     public MluvCommand(Spongebob spongebob){
         this.spongebob=spongebob;
     }
 
+    /**
+     * Normalizuje zadaný text na interní id.
+     *
+     * @param input Vstup od hráče
+     * @return Zformátované ID postavy
+     */
     private String normalizeInput(String input){
         return input.trim().toLowerCase().replace(" ","_");
     }
+
+    /**
+     * Spustí proces příkazu Mluv, zkontroluje validní jméno a vypíše dialog postavy
+     * na dané planetě.
+     *
+     * @param parts Uživatelský vstup obsahující jméno postavy, se kterou chce
+     *              mluvit.
+     */
     @Override
     public void execute(String[] parts) {
         Planet current=spongebob.getData().findPlanet(spongebob.getCurrentPlanet());
@@ -36,7 +62,7 @@ public class MluvCommand implements Command{
             npcId += " "+ parts[i];
         }
         String npc1=normalizeInput(npcId);
-        for (NPC npc :current.getNpcs()) {
+        for (NPC npc : current.getNpcs()) {
             if (npc.getId().equals(npc1)) {
                 System.out.println(npc.getName() + ":");
                 System.out.println(npc.getDialogue());
@@ -54,7 +80,11 @@ public class MluvCommand implements Command{
         System.out.println("Tato postava na planetě není: " + current.getName());
     }
 
-
+    /**
+     * Zajišťuje, zda tento příkaz ukončuje hlavní herní smyčku programu.
+     *
+     * @return false
+     */
     @Override
     public boolean exit() {
         return false;
